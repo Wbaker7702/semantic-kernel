@@ -25,7 +25,7 @@ class MathPlugin:
         except Exception as ex:
             raise ValueError(f"Cannot convert {val!r} to float for math operation") from ex
 
-    @kernel_function(name="Add")
+    @kernel_function(name="Add", description="Adds two numbers.")
     def add(
         self,
         input: Annotated[int | float | str, "The first number to add"],
@@ -36,7 +36,7 @@ class MathPlugin:
         y = self._parse_number(amount)
         return x + y
 
-    @kernel_function(name="Subtract")
+    @kernel_function(name="Subtract", description="Subtracts two numbers.")
     def subtract(
         self,
         input: Annotated[int | float | str, "The number to subtract from"],

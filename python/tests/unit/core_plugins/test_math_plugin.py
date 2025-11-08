@@ -149,6 +149,30 @@ def test_subtract_when_invalid_initial_value_should_throw(initial_value):
         plugin.subtract(**arguments)
 
 
+def test_add_function_has_description():
+    # Arrange
+    kernel = Kernel()
+    kernel.add_plugin(MathPlugin(), "math")
+
+    # Act
+    add_function = kernel.get_function(plugin_name="math", function_name="Add")
+
+    # Assert
+    assert add_function.description == "Adds two numbers."
+
+
+def test_subtract_function_has_description():
+    # Arrange
+    kernel = Kernel()
+    kernel.add_plugin(MathPlugin(), "math")
+
+    # Act
+    subtract_function = kernel.get_function(plugin_name="math", function_name="Subtract")
+
+    # Assert
+    assert subtract_function.description == "Subtracts two numbers."
+
+
 @pytest.mark.parametrize(
     "amount",
     [
