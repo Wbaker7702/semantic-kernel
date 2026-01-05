@@ -18,7 +18,7 @@ namespace Filtering;
 public sealed class MaxTokensWithFilters(ITestOutputHelper output) : BaseTest(output)
 {
     /// <summary>Output max tokens value for demonstration purposes.</summary>
-    private const int MaxTokens = 50;
+    private const int MaxTokens = 75;
 
     [Fact]
     public async Task ExampleAsync()

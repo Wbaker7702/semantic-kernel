@@ -46,7 +46,7 @@ public class LMStudio_ChatCompletion(ITestOutputHelper output) : BaseTest(output
         var mailFunction = kernel.CreateFunctionFromPrompt(prompt, new OpenAIPromptExecutionSettings
         {
             TopP = 0.5,
-            MaxTokens = 1000,
+            MaxTokens = 1500,
         });
 
         var response = await kernel.InvokeAsync(mailFunction, new() { ["input"] = "Tell David that I'm going to finish the business plan by the end of the week." });

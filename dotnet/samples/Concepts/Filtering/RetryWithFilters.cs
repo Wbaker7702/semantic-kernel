@@ -35,7 +35,7 @@ public class RetryWithFilters(ITestOutputHelper output) : BaseTest(output)
         var kernel = builder.Build();
 
         // Initially, use "GPT-4" with invalid API key to simulate exception
-        var executionSettings = new OpenAIPromptExecutionSettings { ModelId = DefaultModelId, MaxTokens = 20 };
+        var executionSettings = new OpenAIPromptExecutionSettings { ModelId = DefaultModelId, MaxTokens = 30 };
 
         var result = await kernel.InvokePromptAsync("Hi, can you help me today?", new(executionSettings));
 
@@ -66,7 +66,7 @@ public class RetryWithFilters(ITestOutputHelper output) : BaseTest(output)
         var kernel = builder.Build();
 
         // Initially, use "GPT-4" with invalid API key to simulate exception
-        var executionSettings = new OpenAIPromptExecutionSettings { ModelId = DefaultModelId, MaxTokens = 20 };
+        var executionSettings = new OpenAIPromptExecutionSettings { ModelId = DefaultModelId, MaxTokens = 30 };
 
         await foreach (var result in kernel.InvokePromptStreamingAsync("Hi, can you help me today?", new(executionSettings)))
         {

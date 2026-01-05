@@ -107,7 +107,7 @@ class GuidedConversation:
 
         # Set common request settings
         self.req_settings = self.kernel.get_prompt_execution_settings_from_service_id(self.service_id)
-        self.req_settings.max_tokens = 2000
+        self.req_settings.max_tokens = 3000
         self.kernel.add_function(plugin_name=ToolName.SEND_MSG_TOOL.value, function=send_message)
         self.kernel.add_function(plugin_name=ToolName.END_CONV_TOOL.value, function=end_conversation)
         self.kernel.add_function(

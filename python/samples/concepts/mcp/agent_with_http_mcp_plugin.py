@@ -117,8 +117,8 @@ history = [
 # Get chat completion
 result = kernel.chat.complete(
     chat_history=history,
-    max_tokens=100,
-    temperature=0.7,
+    max_tokens=150,
+    temperature=0.75,
     top_p=0.95,
 )
 

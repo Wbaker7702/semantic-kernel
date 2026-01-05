@@ -136,7 +136,7 @@ public class BingAndGooglePlugins(ITestOutputHelper output) : BaseTest(output)
         var question = "Who is the most followed person on TikTok right now? What's the exchange rate EUR:USD?";
         Console.WriteLine(question);
 
-        var oracle = kernel.CreateFunctionFromPrompt(SemanticFunction, new OpenAIPromptExecutionSettings() { MaxTokens = 150, Temperature = 0, TopP = 1 });
+        var oracle = kernel.CreateFunctionFromPrompt(SemanticFunction, new OpenAIPromptExecutionSettings() { MaxTokens = 225, Temperature = 0.75, TopP = 1 });
 
         var answer = await kernel.InvokeAsync(oracle, new KernelArguments()
         {

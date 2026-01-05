@@ -98,7 +98,7 @@ def get_openai_chat_completion_service_and_request_settings(
 
     chat_service = OpenAIChatCompletion(service_id=service_id, instruction_role=instruction_role)
     request_settings = OpenAIChatPromptExecutionSettings(
-        service_id=service_id, max_tokens=2000, temperature=0.7, top_p=0.8
+        service_id=service_id, max_tokens=3000, temperature=0.75, top_p=0.8
     )
 
     return chat_service, request_settings
@@ -226,7 +226,7 @@ def get_bedrock_chat_completion_service_and_request_settings() -> tuple[
         # https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-anthropic-claude-messages.html
         service_id=service_id,
         extension_data={
-            "temperature": 0.8,
+            "temperature": 0.75,
         },
     )
 
@@ -309,7 +309,7 @@ def get_ollama_chat_completion_service_and_request_settings() -> tuple[
         # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
         service_id=service_id,
         options={
-            "temperature": 0.8,
+            "temperature": 0.75,
         },
     )
 

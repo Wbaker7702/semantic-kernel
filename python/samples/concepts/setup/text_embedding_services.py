@@ -273,7 +273,7 @@ def get_ollama_text_embedding_service_and_request_settings() -> tuple[
         # For more information on the available options, refer to the Ollama API documentation:
         # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
         options={
-            "temperature": 0.8,
+            "temperature": 0.75,
         },
     )
 

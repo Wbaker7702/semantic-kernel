@@ -24,7 +24,7 @@ async def main():
         template=ConversationSummaryPlugin._summarize_conversation_prompt_template,
         description="Given a section of a conversation transcript, summarize the part of the conversation.",
         execution_settings=PromptExecutionSettings(
-            service_id=service_id, max_tokens=ConversationSummaryPlugin._max_tokens, temperature=0.1, top_p=0.5
+            service_id=service_id, max_tokens=ConversationSummaryPlugin._max_tokens, temperature=0.75, top_p=0.5
         ),
         allow_dangerously_set_content=True,
     )

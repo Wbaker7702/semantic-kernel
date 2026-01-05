@@ -5,4 +5,4 @@ instructions: Use the provided functions to answer questions about the menu.
 model:
   id: "gpt-4.1"
   options:
-    temperature: 0.4
+    temperature: 0.75

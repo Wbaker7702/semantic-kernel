@@ -178,7 +178,7 @@ class Agenda:
     async def _fix_agenda_error(self, previous_attempts: str, conversation: Conversation) -> None:
         """Calls an LLM to try and fix an error in the agenda update."""
         req_settings = self.kernel.get_prompt_execution_settings_from_service_id(self.service_id)
-        req_settings.max_tokens = 2000
+        req_settings.max_tokens = 3000
 
         self.kernel.add_function(plugin_name=self.id, function=self.update_agenda_items)
         filter = {"included_plugins": [self.id]}

@@ -44,7 +44,7 @@ async Task SKAgent()
         Kernel = builder.Build(),
         Arguments = new KernelArguments(new OpenAIPromptExecutionSettings()
         {
-            MaxTokens = 1000,
+            MaxTokens = 1500,
             FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
         }),
     };
@@ -86,7 +86,7 @@ async Task SKAgent_As_AFAgent()
         Kernel = builder.Build(),
         Arguments = new KernelArguments(new OpenAIPromptExecutionSettings()
         {
-            MaxTokens = 1000,
+            MaxTokens = 1500,
             FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
         }),
     };

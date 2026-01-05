@@ -78,8 +78,8 @@ public class CreatePromptPluginFromDirectory(ITestOutputHelper output) : BaseTes
               description: The generated funny joke.
             execution_settings:
               default:
-                temperature: 0.9
-                max_tokens: 1000
+                temperature: 0.75
+                max_tokens: 1500
                 top_p: 0.0
                 presence_penalty: 0.0
                 frequency_penalty: 0.0

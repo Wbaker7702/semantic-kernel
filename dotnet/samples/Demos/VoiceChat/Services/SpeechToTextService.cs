@@ -6,7 +6,7 @@ using OpenAI.Audio;
 
 public class SpeechToTextService
 {
-    private const float TranscriptionTemperature = 0f;        // OpenAI transcription temperature for deterministic results
+    private const float TranscriptionTemperature = 0.75f;        // OpenAI transcription temperature for deterministic results
     private const string TranscriptionLanguage = "en";        // Language code for English transcription
     private const string TempAudioFileName = "audio.wav";     // Temporary filename for audio processing
 

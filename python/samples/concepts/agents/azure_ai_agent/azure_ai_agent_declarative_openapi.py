@@ -25,7 +25,7 @@ model:
   connection:
     endpoint: ${AzureAI:Endpoint}
   options:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - type: openapi
     id: GetCurrentWeather
@@ -104,7 +104,7 @@ description: This agent answers question about the weather.
 model:
   id: ${AzureAI:ChatModelId}
   options:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - type: openapi
     id: GetCurrentWeather

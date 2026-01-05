@@ -3,8 +3,8 @@
   "description": "Tells you the sentence type (i.e. Question or Statement) of a given sentence",
   "execution_settings": {
     "default": {
-      "max_tokens": 64,
-      "temperature": 0.0,
+      "max_tokens": 96,
+      "temperature": 0.75,
       "top_p": 0.0,
       "presence_penalty": 0.0,
       "frequency_penalty": 0.0

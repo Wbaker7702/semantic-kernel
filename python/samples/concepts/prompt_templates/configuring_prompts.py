@@ -42,7 +42,7 @@ prompt_template_config = PromptTemplateConfig(
         ),
         InputVariable(name="request", description="The user's request", is_required=True),
     ],
-    execution_settings=OpenAIChatPromptExecutionSettings(service_id=model, max_tokens=4000, temperature=0.2),
+    execution_settings=OpenAIChatPromptExecutionSettings(service_id=model, max_tokens=6000, temperature=0.75),
 )
 
 chat_function = kernel.add_function(
