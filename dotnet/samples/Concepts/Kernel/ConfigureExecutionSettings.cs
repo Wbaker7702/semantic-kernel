@@ -45,8 +45,8 @@ public sealed class ConfigureExecutionSettings(ITestOutputHelper output) : BaseT
             prompt,
             new(new OpenAIPromptExecutionSettings()
             {
-                MaxTokens = 60,
-                Temperature = 0.7
+                MaxTokens = 90,
+                Temperature = 0.75
             }));
         Console.WriteLine(result.GetValue<string>());
 
@@ -61,8 +61,8 @@ public sealed class ConfigureExecutionSettings(ITestOutputHelper output) : BaseT
                 "description": "Say hello to an AI",
                 "type": "completion",
                 "completion": {
-                "max_tokens": 256,
-                "temperature": 0.5,
+                "max_tokens": 384,
+                "temperature": 0.75,
                 "top_p": 0.0,
                 "presence_penalty": 0.0,
                 "frequency_penalty": 0.0

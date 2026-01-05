@@ -55,7 +55,7 @@ public class Step09_Declarative(ITestOutputHelper output) : BaseAgentsTest(outpu
             description: This agent uses the provided functions to answer questions about the menu.
             model:
               options:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - id: MenuPlugin.GetSpecials
                 type: function

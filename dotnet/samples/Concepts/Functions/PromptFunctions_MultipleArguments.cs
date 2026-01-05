@@ -63,7 +63,7 @@ public class PromptFunctions_MultipleArguments(ITestOutputHelper output) : BaseT
         Console.WriteLine(renderedPrompt);
 
         // Run the prompt / prompt function
-        var haiku = kernel.CreateFunctionFromPrompt(FunctionDefinition, new OpenAIPromptExecutionSettings() { MaxTokens = 100 });
+        var haiku = kernel.CreateFunctionFromPrompt(FunctionDefinition, new OpenAIPromptExecutionSettings() { MaxTokens = 150 });
 
         // Show the result
         Console.WriteLine("--- Prompt Function result");

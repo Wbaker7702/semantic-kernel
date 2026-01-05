@@ -34,7 +34,7 @@ public class Connectors_KernelStreaming(ITestOutputHelper output) : BaseTest(out
                 modelId: chatModelId)
             .Build();
 
-        var funnyParagraphFunction = kernel.CreateFunctionFromPrompt("Write a funny paragraph about streaming", new OpenAIPromptExecutionSettings() { MaxTokens = 100, Temperature = 0.4, TopP = 1 });
+        var funnyParagraphFunction = kernel.CreateFunctionFromPrompt("Write a funny paragraph about streaming", new OpenAIPromptExecutionSettings() { MaxTokens = 150, Temperature = 0.75, TopP = 1 });
 
         var roleDisplayed = false;
 

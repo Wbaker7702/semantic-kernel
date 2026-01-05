@@ -70,7 +70,7 @@ def get_openai_text_completion_service_and_request_settings() -> tuple[
     from semantic_kernel.connectors.ai.open_ai import OpenAITextCompletion, OpenAITextPromptExecutionSettings
 
     text_service = OpenAITextCompletion()
-    request_settings = OpenAITextPromptExecutionSettings(max_tokens=20, temperature=0.7, top_p=0.8)
+    request_settings = OpenAITextPromptExecutionSettings(max_tokens=30, temperature=0.75, top_p=0.8)
 
     return text_service, request_settings
 
@@ -125,7 +125,7 @@ def get_bedrock_text_completion_service_and_request_settings() -> tuple[
         # For example, for Cohere Command specific settings, refer to:
         # https://docs.aws.amazon.com/bedrock/latest/userguide/model-parameters-titan-text.html
         extension_data={
-            "temperature": 0.8,
+            "temperature": 0.75,
             "maxTokenCount": 20,
         },
     )
@@ -209,7 +209,7 @@ def get_ollama_text_completion_service_and_request_settings() -> tuple[
         # For more information on the available options, refer to the Ollama API documentation:
         # https://github.com/ollama/ollama/blob/main/docs/modelfile.md#valid-parameters-and-values
         options={
-            "temperature": 0.8,
+            "temperature": 0.75,
         },
     )
 

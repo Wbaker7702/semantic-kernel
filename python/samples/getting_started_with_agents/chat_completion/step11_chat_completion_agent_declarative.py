@@ -65,7 +65,7 @@ tools:
     type: function
 model:
   options:
-    temperature: 0.7
+    temperature: 0.75
 """
 
 # 3. Define your simulated conversation

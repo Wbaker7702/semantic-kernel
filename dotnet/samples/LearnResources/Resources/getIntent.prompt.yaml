@@ -28,13 +28,13 @@ input_variables:
     is_required: true
 execution_settings:
   default:
-    max_tokens: 10
-    temperature: 0
+    max_tokens: 15
+    temperature: 0.75
   gpt-3.5-turbo:
     model_id: gpt-3.5-turbo-0613
-    max_tokens: 10
-    temperature: 0.2
+    max_tokens: 15
+    temperature: 0.75
   gpt-4:
     model_id: gpt-4-1106-preview
-    max_tokens: 10
-    temperature: 0.2
+    max_tokens: 15
+    temperature: 0.75
