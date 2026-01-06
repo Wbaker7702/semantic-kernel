@@ -46,7 +46,7 @@ def update_file(file_path):
                 f.write(content)
             print(f"Updated {file_path}")
             
-    except Exception as e:
+    except (IOError, UnicodeDecodeError) as e:
         print(f"Error processing {file_path}: {e}")
 
 def main():
