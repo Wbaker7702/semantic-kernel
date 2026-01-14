@@ -296,7 +296,7 @@ def mock_thread_requires_action_run():
             ],
             truncation_strategy=TruncationStrategy(type="auto", last_messages=None),
             usage=None,
-            temperature=1.0,
+            temperature=0.75,
             top_p=1.0,
             tool_resources={"code_interpreter": {"file_ids": []}},  # type: ignore
         ),
@@ -526,7 +526,7 @@ async def test_assistant_thread_actions_stream(
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 0.7
+    definition.temperature = 0.75
     definition.top_p = 0.9
     definition.metadata = {}
     definition.response_format = {"type": "json_object"}
@@ -577,7 +577,7 @@ async def test_assistant_thread_actions_stream_tool_and_text_message_ordering(mo
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 0.7
+    definition.temperature = 0.75
     definition.top_p = 0.9
     definition.metadata = {}
     definition.response_format = {"type": "json_object"}
@@ -642,7 +642,7 @@ async def test_assistant_thread_actions_stream_run_fails(
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 0.7
+    definition.temperature = 0.75
     definition.top_p = 0.9
     definition.metadata = {}
     definition.response_format = {"type": "json_object"}
@@ -695,7 +695,7 @@ async def test_assistant_thread_actions_stream_with_instructions(
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 0.7
+    definition.temperature = 0.75
     definition.top_p = 0.9
     definition.metadata = {}
     definition.response_format = {"type": "json_object"}
@@ -731,7 +731,7 @@ async def test_assistant_thread_actions_stream_with_instructions(
         thread_id="thread_id",
         instructions="Template instructions",
         tools=[],
-        temperature=0.7,
+        temperature=0.75,
         top_p=0.9,
         model="gpt-4o",
         metadata={},
@@ -755,7 +755,7 @@ async def test_assistant_thread_actions_stream_with_instructions(
         thread_id="thread_id",
         instructions="Template instructions\n\nMy additional instructions",
         tools=[],
-        temperature=0.7,
+        temperature=0.75,
         top_p=0.9,
         model="gpt-4o",
         metadata={},

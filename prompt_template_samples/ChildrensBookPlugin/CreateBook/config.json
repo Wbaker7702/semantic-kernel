@@ -3,7 +3,7 @@
   "description": "Creates a children's book from the given input with a suggested number of words per page and a specific total number of pages",
   "execution_settings": {
     "default": {
-      "max_tokens": 3000,
+      "max_tokens": 4500,
       "temperature": 0.75,
       "top_p": 1.0,
       "presence_penalty": 0.0,

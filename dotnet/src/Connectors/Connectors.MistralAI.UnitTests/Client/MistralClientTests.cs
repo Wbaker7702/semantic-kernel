@@ -67,7 +67,7 @@ public sealed class MistralClientTests : MistralTestBase
         };
 
         // Act
-        var executionSettings = new MistralAIPromptExecutionSettings { MaxTokens = 1024, Temperature = 0.9 };
+        var executionSettings = new MistralAIPromptExecutionSettings { MaxTokens = 1536, Temperature = 0.75 };
         await client.GetChatMessageContentsAsync(chatHistory, default, executionSettings);
 
         // Assert
@@ -595,8 +595,8 @@ public sealed class MistralClientTests : MistralTestBase
         // Arrange
         var settings = new MistralAIPromptExecutionSettings
         {
-            MaxTokens = 1024,
-            Temperature = 0.9,
+            MaxTokens = 1536,
+            Temperature = 0.75,
             TopP = 0.9,
             FrequencyPenalty = 0.9,
             PresencePenalty = 0.9,

@@ -37,7 +37,7 @@ async Task SKAgent()
 
     // Create a thread for the agent conversation.
     var thread = new OpenAIAssistantAgentThread(assistantsClient);
-    var settings = new OpenAIPromptExecutionSettings() { MaxTokens = 1500 };
+    var settings = new OpenAIPromptExecutionSettings() { MaxTokens = 2250 };
     var agentOptions = new OpenAIAssistantAgentInvokeOptions() { KernelArguments = new(settings) };
 
     await foreach (var result in agent.InvokeAsync(userInput, thread, agentOptions))

@@ -78,7 +78,7 @@ public sealed class OpenAIAutoFunctionChoiceBehaviorTests : BaseIntegrationTest
             template: How many days until Christmas?
             execution_settings:
               default:
-                temperature: 0.1
+                temperature: 0.75
                 function_choice_behavior:
                   type: auto
             """";
@@ -182,7 +182,7 @@ public sealed class OpenAIAutoFunctionChoiceBehaviorTests : BaseIntegrationTest
             template: How many days until Christmas?
             execution_settings:
               default:
-                temperature: 0.1
+                temperature: 0.75
                 function_choice_behavior:
                   type: auto
             """";

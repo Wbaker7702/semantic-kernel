@@ -132,7 +132,7 @@ public class OpenAIAssistantAgentFactoryTests : IDisposable
             }
           ],
           "top_p": 1.0,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "reasoning_effort": null,
           "tool_resources": {
             "code_interpreter": {
@@ -159,7 +159,7 @@ public class OpenAIAssistantAgentFactoryTests : IDisposable
           "instructions": "Tell a story suitable for children about the topic provided by the user.",
           "tools": [],
           "top_p": 1.0,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "tool_resources": {},
           "metadata": {},
           "response_format": "auto"

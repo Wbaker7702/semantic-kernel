@@ -127,7 +127,7 @@ pytestmark = pytest.mark.parametrize(
         pytest.param(
             "azure_ai_inference",
             {
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 ChatMessageContent(
@@ -147,7 +147,7 @@ pytestmark = pytest.mark.parametrize(
         pytest.param(
             "azure_ai_inference",
             {
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 ChatMessageContent(

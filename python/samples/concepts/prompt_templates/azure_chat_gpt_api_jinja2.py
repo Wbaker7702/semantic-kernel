@@ -30,7 +30,7 @@ chat_service = AzureChatCompletion(service_id=service_id, credential=AzureCliCre
 kernel.add_service(chat_service)
 
 req_settings = kernel.get_prompt_execution_settings_from_service_id(service_id=service_id)
-req_settings.max_tokens = 3000
+req_settings.max_tokens = 4500
 req_settings.temperature = 0.75
 req_settings.top_p = 0.8
 req_settings.function_choice_behavior = FunctionChoiceBehavior.Auto()

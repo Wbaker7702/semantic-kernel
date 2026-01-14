@@ -25,7 +25,7 @@ public class ChatHistoryAuthorName(ITestOutputHelper output) : BaseTest(output)
         {
             FrequencyPenalty = 0,
             PresencePenalty = 0,
-            Temperature = 1,
+            Temperature = 0.75,
             TopP = 0.5,
         };
 

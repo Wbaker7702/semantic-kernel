@@ -96,7 +96,7 @@ public class CompleteNewCustomerFormStep : KernelProcessStep<NewCustomerFormStat
         {
             ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
             Temperature = 0.75,
-            MaxTokens = 3072
+            MaxTokens = 4608
         };
 
         ChatHistory chatHistory = new();

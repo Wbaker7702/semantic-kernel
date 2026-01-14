@@ -30,7 +30,7 @@ public sealed class HuggingFace_ImageToText(ITestOutputHelper output) : BaseTest
         // Set execution settings (optional)
         HuggingFacePromptExecutionSettings executionSettings = new()
         {
-            MaxTokens = 750
+            MaxTokens = 1125
         };
 
         // Read image content from a file

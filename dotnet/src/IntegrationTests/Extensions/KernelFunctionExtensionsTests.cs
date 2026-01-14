@@ -30,7 +30,7 @@ public sealed class KernelFunctionExtensionsTests(ITestOutputHelper output) : ID
         var prompt = $"Hey {{{{{nameof(EmailPluginFake)}.GetEmailAddress}}}}";
 
         // Act
-        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OpenAIPromptExecutionSettings() { MaxTokens = 150 }));
+        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OpenAIPromptExecutionSettings() { MaxTokens = 225 }));
 
         // Assert
         Assert.Equal("Hey johndoe1234@example.com", actual.GetValue<string>());
@@ -48,7 +48,7 @@ public sealed class KernelFunctionExtensionsTests(ITestOutputHelper output) : ID
         var prompt = $"Hey {{{{{nameof(EmailPluginFake)}.GetEmailAddress \"a person\"}}}}";
 
         // Act
-        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OpenAIPromptExecutionSettings() { MaxTokens = 150 }));
+        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OpenAIPromptExecutionSettings() { MaxTokens = 225 }));
 
         // Assert
         Assert.Equal("Hey a person@example.com", actual.GetValue<string>());
@@ -68,7 +68,7 @@ public sealed class KernelFunctionExtensionsTests(ITestOutputHelper output) : ID
         // Act
         FunctionResult actual = await target.InvokePromptAsync(
             prompt,
-            new(new OpenAIPromptExecutionSettings() { MaxTokens = 150 }),
+            new(new OpenAIPromptExecutionSettings() { MaxTokens = 225 }),
             templateFormat: "handlebars",
             promptTemplateFactory: new HandlebarsPromptTemplateFactory());
 
@@ -90,7 +90,7 @@ public sealed class KernelFunctionExtensionsTests(ITestOutputHelper output) : ID
         // Act
         FunctionResult actual = await target.InvokeHandlebarsPromptAsync(
             prompt,
-            new(new OpenAIPromptExecutionSettings() { MaxTokens = 150 }));
+            new(new OpenAIPromptExecutionSettings() { MaxTokens = 225 }));
 
         // Assert
         Assert.Equal("Hey johndoe1234@example.com", actual.GetValue<string>());

@@ -103,7 +103,7 @@ public sealed class OllamaChatClientIntegrationTests : IDisposable
 
         var chatOptions = new ChatOptions
         {
-            Temperature = 0.1f,
+            Temperature = 0.75f,
             MaxOutputTokens = 50
         };
 

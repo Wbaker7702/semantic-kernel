@@ -86,7 +86,7 @@ public class LMStudio_ChatCompletionStreaming(ITestOutputHelper output) : BaseTe
         var mailFunction = kernel.CreateFunctionFromPrompt(prompt, new OpenAIPromptExecutionSettings
         {
             TopP = 0.5,
-            MaxTokens = 1500,
+            MaxTokens = 2250,
         });
 
         await foreach (var word in kernel.InvokeStreamingAsync(mailFunction, new() { ["input"] = "Tell David that I'm going to finish the business plan by the end of the week." }))

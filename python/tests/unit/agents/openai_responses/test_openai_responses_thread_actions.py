@@ -31,7 +31,7 @@ def mock_agent():
     agent.polling_options.default_polling_interval.total_seconds.return_value = 0.0001
     agent.tools = []
     agent.text = "auto"
-    agent.temperature = 0.7
+    agent.temperature = 0.75
     agent.top_p = 1.0
     agent.metadata = {}
     agent.format_instructions = AsyncMock(return_value="base instructions")

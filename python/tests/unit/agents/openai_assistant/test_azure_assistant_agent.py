@@ -40,7 +40,7 @@ def mock_azure_openai_client_and_definition():
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 1.0
+    definition.temperature = 0.75
     definition.top_p = 1.0
     definition.metadata = {}
 
@@ -215,7 +215,7 @@ async def test_open_ai_assistant_agent_invoke(arguments, include_args):
     definition.tools = []
     definition.model = "gpt-4o"
     definition.response_format = {"type": "json_object"}
-    definition.temperature = 0.1
+    definition.temperature = 0.75
     definition.top_p = 0.9
     definition.metadata = {}
     agent = AzureAssistantAgent(client=client, definition=definition)

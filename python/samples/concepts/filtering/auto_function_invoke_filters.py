@@ -51,7 +51,7 @@ chat_function = kernel.add_function(
 # If configured to be greater than one, this value will be overridden to 1.
 execution_settings = OpenAIChatPromptExecutionSettings(
     service_id="chat",
-    max_tokens=3000,
+    max_tokens=4500,
     temperature=0.75,
     top_p=0.8,
     function_choice_behavior=FunctionChoiceBehavior.Auto(filters={"included_plugins": ["math", "time"]}),

@@ -438,7 +438,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             ],
             "model": "gpt-4o-realtime-preview-2024-12-17",
             "output_audio_format": "pcm16",
-            "temperature": 0.8,
+            "temperature": 0.75,
             "tool_choice": "auto",
             "tools": [],
             "turn_detection": {
@@ -469,7 +469,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             ],
             "model": "gpt-4o-realtime-preview-2024-12-17",
             "output_audio_format": "pcm16",
-            "temperature": 0.8,
+            "temperature": 0.75,
             "tool_choice": "auto",
             "tools": [],
             "turn_detection": {
@@ -502,7 +502,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "in_progress",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": null,
             "voice": "echo"
         },
@@ -765,7 +765,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "completed",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": {
                 "input_token_details": {
                     "audio_tokens": 0,
@@ -853,7 +853,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "in_progress",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": null,
             "voice": "echo"
         },
@@ -1134,7 +1134,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "completed",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": {
                 "input_token_details": {
                     "audio_tokens": 48,
@@ -1222,7 +1222,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "in_progress",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": null,
             "voice": "echo"
         },
@@ -1254,7 +1254,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
                 "reason": "turn_detected",
                 "type": "cancelled"
             },
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": {
                 "input_token_details": {
                     "audio_tokens": 0,
@@ -1330,7 +1330,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "in_progress",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": null,
             "voice": "echo"
         },
@@ -1737,7 +1737,7 @@ Example of events coming from a few seconds of conversation with the OpenAI Real
             "output_audio_format": "pcm16",
             "status": "completed",
             "status_details": null,
-            "temperature": 0.8,
+            "temperature": 0.75,
             "usage": {
                 "input_token_details": {
                     "audio_tokens": 114,

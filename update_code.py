@@ -16,13 +16,13 @@ def update_file(file_path):
             return f"{prefix}{new_val}"
             
         # Patterns for Max Tokens
-        # 1. max_tokens=100 or max_tokens: 100
+        # 1. max_tokens=150 or max_tokens: 150
         content = re.sub(r'(max_tokens\s*[:=]\s*)(\d+)', repl_tokens, content)
-        # 2. "max_tokens": 100
+        # 2. "max_tokens": 150
         content = re.sub(r'(["\']max_tokens["\']\s*[:]\s*)(\d+)', repl_tokens, content)
-        # 3. MaxTokens = 100
+        # 3. MaxTokens = 150
         content = re.sub(r'(MaxTokens\s*=\s*)(\d+)', repl_tokens, content)
-        # 4. maxTokens: 100
+        # 4. maxTokens: 150
         content = re.sub(r'(maxTokens\s*[:]\s*)(\d+)', repl_tokens, content)
         
         # Helper for temperature -> 0.75
@@ -34,11 +34,11 @@ def update_file(file_path):
         # But if I replace 0 with 0.75, I get 0.75f. Correct.
         
         # Patterns for Temperature
-        # 1. temperature=0.5 or temperature: 0.5
+        # 1. temperature=0.75 or temperature: 0.75
         content = re.sub(r'(temperature\s*[:=]\s*)[\d\.]+', r'\g<1>0.75', content)
-        # 2. "temperature": 0.5
+        # 2. "temperature": 0.75
         content = re.sub(r'(["\']temperature["\']\s*[:]\s*)[\d\.]+', r'\g<1>0.75', content)
-        # 3. Temperature = 0.5
+        # 3. Temperature = 0.75
         content = re.sub(r'(Temperature\s*=\s*)[\d\.]+', r'\g<1>0.75', content)
         
         if content != original_content:

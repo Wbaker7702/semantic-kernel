@@ -26,8 +26,8 @@ pytestmark = pytest.mark.parametrize(
         pytest.param(
             PromptExecutionSettings(
                 extension_data={
-                    "max_tokens": 1000,
-                    "temperature": 0.5,
+                    "max_tokens": 1500,
+                    "temperature": 0.75,
                     "top_p": 0.9,
                 }
             ),

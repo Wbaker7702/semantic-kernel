@@ -5,7 +5,7 @@ template_format: semantic-kernel
 description: Provides information about movies to the user.
 execution_settings:
   default:
-    max_tokens: 1500
+    max_tokens: 2250
     temperature: 0.75
     response_format:
       type: json_schema

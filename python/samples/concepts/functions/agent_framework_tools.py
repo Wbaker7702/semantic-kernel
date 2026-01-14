@@ -56,7 +56,7 @@ async def main():
     function = KernelFunctionFromPrompt(
         description="Determine the kind of day based on the current time and date.",
         plugin_name="TimePlugin",
-        prompt_execution_settings=OpenAIChatPromptExecutionSettings(service_id=service_id, max_tokens=150),
+        prompt_execution_settings=OpenAIChatPromptExecutionSettings(service_id=service_id, max_tokens=225),
         function_name="kind_of_day",
         prompt_template=prompt_template,
     ).as_agent_framework_tool(kernel=kernel)

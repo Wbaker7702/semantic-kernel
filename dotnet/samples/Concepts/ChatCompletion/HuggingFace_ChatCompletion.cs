@@ -44,7 +44,7 @@ public class HuggingFace_ChatCompletion(ITestOutputHelper output) : BaseTest(out
         var mailFunction = kernel.CreateFunctionFromPrompt(prompt, new HuggingFacePromptExecutionSettings
         {
             TopP = 0.5f,
-            MaxTokens = 1500,
+            MaxTokens = 2250,
         });
 
         var response = await kernel.InvokeAsync(mailFunction, new() { ["input"] = "Tell David that I'm going to finish the business plan by the end of the week." });

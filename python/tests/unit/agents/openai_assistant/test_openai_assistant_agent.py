@@ -37,7 +37,7 @@ def mock_openai_client_and_definition():
     definition.instructions = "test agent"
     definition.tools = []
     definition.model = "gpt-4o"
-    definition.temperature = 1.0
+    definition.temperature = 0.75
     definition.top_p = 1.0
     definition.metadata = {}
 

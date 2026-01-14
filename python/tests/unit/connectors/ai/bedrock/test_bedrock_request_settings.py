@@ -17,10 +17,10 @@ def test_default_bedrock_prompt_execution_settings():
 
 def test_custom_bedrock_prompt_execution_settings():
     settings = BedrockPromptExecutionSettings(
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         top_k=10,
-        max_tokens=128,
+        max_tokens=192,
         stop=["world"],
     )
 
@@ -44,8 +44,8 @@ def test_bedrock_prompt_execution_settings_from_default_completion_config():
 
 
 def test_bedrock_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = BedrockChatPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = BedrockPromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = BedrockChatPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = BedrockPromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
 
     assert chat_settings.service_id == "test_2"
@@ -56,10 +56,10 @@ def test_bedrock_prompt_execution_settings_from_custom_completion_config():
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "top_k": 10,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "stop": ["world"],
         },
     )
@@ -88,10 +88,10 @@ def test_create_options():
     settings = BedrockPromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "top_k": 10,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "stop": ["world"],
         },
     )

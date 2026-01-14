@@ -373,7 +373,7 @@ public sealed class HuggingFacePromptExecutionSettings : PromptExecutionSettings
     private List<string>? _stop;
     private int? _topLogProbs;
     private int _resultsPerPrompt = 1;
-    private float _temperature = 1;
+    private float _temperature = 0.75;
     private float? _topP;
     private float? _repetitionPenalty;
     private int? _maxTokens;

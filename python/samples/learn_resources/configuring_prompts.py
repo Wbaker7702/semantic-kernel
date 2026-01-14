@@ -45,9 +45,9 @@ User: {{$request}}
 Assistant:  """,
         description="Chat with the assistant",
         execution_settings=[
-            PromptExecutionSettings(service_id="default", temperature=0.75, max_tokens=1500),
-            PromptExecutionSettings(service_id="gpt-3.5-turbo", temperature=0.75, max_tokens=6000),
-            PromptExecutionSettings(service_id="gpt-4", temperature=0.75, max_tokens=12000),
+            PromptExecutionSettings(service_id="default", temperature=0.75, max_tokens=2250),
+            PromptExecutionSettings(service_id="gpt-3.5-turbo", temperature=0.75, max_tokens=9000),
+            PromptExecutionSettings(service_id="gpt-4", temperature=0.75, max_tokens=18000),
         ],
         input_variables=[
             InputVariable(name="request", description="The user input", is_required=True),

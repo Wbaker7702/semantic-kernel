@@ -178,7 +178,7 @@ def test_init_exposes_the_native_function_it_contains(mock_function):
 
 
 def test_init_with_prompt_function():
-    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 2000, "temperature": 0.7, "top_p": 0.8})
+    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 3000, "temperature": 0.75, "top_p": 0.8})
 
     prompt = "Use this input: {{$request}}"
 
@@ -214,7 +214,7 @@ def test_init_with_prompt_function():
 
 
 def test_init_with_both_function_types(mock_function):
-    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 2000, "temperature": 0.7, "top_p": 0.8})
+    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 3000, "temperature": 0.75, "top_p": 0.8})
 
     prompt = "Use this input: {{$request}}"
 
@@ -258,7 +258,7 @@ def test_init_with_both_function_types(mock_function):
 
 
 def test_init_with_same_function_names(mock_function):
-    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 2000, "temperature": 0.7, "top_p": 0.8})
+    req_settings = PromptExecutionSettings(extension_data={"max_tokens": 3000, "temperature": 0.75, "top_p": 0.8})
 
     prompt = "Use this input: {{$request}}"
 

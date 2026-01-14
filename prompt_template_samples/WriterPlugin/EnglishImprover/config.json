@@ -3,7 +3,7 @@
   "description": "Translate text to English and improve it",
   "execution_settings": {
     "default": {
-      "max_tokens": 4500,
+      "max_tokens": 6750,
       "temperature": 0.75,
       "top_p": 0.0,
       "presence_penalty": 0.0,

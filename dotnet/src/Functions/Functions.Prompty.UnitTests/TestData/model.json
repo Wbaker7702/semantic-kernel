@@ -6,7 +6,7 @@
     "api_version": "2023-07-01-preview"
   },
   "options": {
-    "temperature": 0.5
+    "temperature": 0.75
   }
 }
 
