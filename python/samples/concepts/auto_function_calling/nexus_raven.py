@@ -345,7 +345,7 @@ kernel.add_function(
     prompt_execution_settings=OpenAIChatPromptExecutionSettings(
         service_id="openai",
         temperature=0.75,
-        max_tokens=1500,
+        max_tokens=2250,
     ),
 )
 kernel.add_plugin(MathPlugin(), "math")

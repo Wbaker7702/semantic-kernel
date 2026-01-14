@@ -3,7 +3,7 @@
   "description": "Write an email from the given bullet points",
   "execution_settings": {
     "default": {
-      "max_tokens": 384,
+      "max_tokens": 576,
       "temperature": 0.75,
       "top_p": 0.0,
       "presence_penalty": 0.0,

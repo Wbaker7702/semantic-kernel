@@ -3,7 +3,7 @@
   "description": "Given a request to generate an acronym from a string, generate an acronym and provide the acronym explanation.",
   "execution_settings": {
     "default": {
-      "max_tokens": 384,
+      "max_tokens": 576,
       "temperature": 0.75,
       "top_p": 1.0,
       "presence_penalty": 0.0,

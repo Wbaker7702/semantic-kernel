@@ -37,8 +37,8 @@ def test_ollama_prompt_execution_settings_from_default_completion_config():
 
 
 def test_ollama_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = OllamaChatPromptExecutionSettings(service_id="test_service", options={"temperature": 0.5})
-    new_settings = OllamaPromptExecutionSettings(service_id="test_2", options={"temperature": 0.0})
+    chat_settings = OllamaChatPromptExecutionSettings(service_id="test_service", options={"temperature": 0.75})
+    new_settings = OllamaPromptExecutionSettings(service_id="test_2", options={"temperature": 0.75})
     chat_settings.update_from_prompt_execution_settings(new_settings)
 
     assert chat_settings.service_id == "test_2"

@@ -278,7 +278,7 @@ def test_normalize_spec_fields_creates_kernel_and_extracts_fields():
         "name": "TestAgent",
         "description": "An agent",
         "instructions": "Use this.",
-        "model": {"options": {"temperature": 0.7}},
+        "model": {"options": {"temperature": 0.75}},
     }
 
     fields, kernel = DeclarativeSpecMixin._normalize_spec_fields(data)

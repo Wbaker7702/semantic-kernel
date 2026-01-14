@@ -21,14 +21,14 @@ public class OpenAIPromptExecutionSettingsTests
         // Arrange
         AzureOpenAIPromptExecutionSettings originalSettings = new()
         {
-            Temperature = 0.7,
+            Temperature = 0.75,
             TopP = 0.7,
             FrequencyPenalty = 0.7,
             PresencePenalty = 0.7,
             StopSequences = new string[] { "foo", "bar" },
             ChatSystemPrompt = "chat system prompt",
             TokenSelectionBiases = new Dictionary<int, int>() { { 1, 2 }, { 3, 4 } },
-            MaxTokens = 128,
+            MaxTokens = 192,
             Logprobs = true,
             Seed = 123456,
             TopLogprobs = 5,
@@ -101,7 +101,7 @@ public class OpenAIPromptExecutionSettingsTests
         var json =
             """
             {
-                "temperature": 0.7,
+                "temperature": 0.75,
                 "top_p": 0.7,
                 "frequency_penalty": 0.7,
                 "presence_penalty": 0.7,
@@ -112,7 +112,7 @@ public class OpenAIPromptExecutionSettingsTests
                       "1": "2",
                       "3": "4"
                     },
-                "max_tokens": 128,
+                "max_tokens": 192,
                 "logprobs": true,
                 "seed": 123456,
                 "top_logprobs": 5

@@ -34,7 +34,7 @@ internal static class OnnxChatCompletionSamples
 
         OnnxRuntimeGenAIPromptExecutionSettings executionSettings = new()
         {
-            Temperature = 0.7f, // Adjusts creativity level  
+            Temperature = 0.75f, // Adjusts creativity level  
             TopP = 0.9f // Limits token choice diversity
         };
 
@@ -67,7 +67,7 @@ internal static class OnnxChatCompletionSamples
 
         OnnxRuntimeGenAIPromptExecutionSettings executionSettings = new()
         {
-            Temperature = 0.7f, // Adjusts creativity level  
+            Temperature = 0.75f, // Adjusts creativity level  
             TopP = 0.9f // Limits token choice diversity
         };
 

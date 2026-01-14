@@ -47,7 +47,7 @@ Excuse: I've been too busy training my pet dragon.
 Event: {{$input}}
 ";
 
-        var excuseFunction = kernel.CreateFunctionFromPrompt(promptTemplate, new OpenAIPromptExecutionSettings() { MaxTokens = 150, Temperature = 0.75, TopP = 1 });
+        var excuseFunction = kernel.CreateFunctionFromPrompt(promptTemplate, new OpenAIPromptExecutionSettings() { MaxTokens = 225, Temperature = 0.75, TopP = 1 });
 
         var result = await kernel.InvokeAsync(excuseFunction, new() { ["input"] = "I missed the F1 final race" });
         Console.WriteLine(result.GetValue<string>());
@@ -55,7 +55,7 @@ Event: {{$input}}
         result = await kernel.InvokeAsync(excuseFunction, new() { ["input"] = "sorry I forgot your birthday" });
         Console.WriteLine(result.GetValue<string>());
 
-        var fixedFunction = kernel.CreateFunctionFromPrompt($"Translate this date {DateTimeOffset.Now:f} to French format", new OpenAIPromptExecutionSettings() { MaxTokens = 150 });
+        var fixedFunction = kernel.CreateFunctionFromPrompt($"Translate this date {DateTimeOffset.Now:f} to French format", new OpenAIPromptExecutionSettings() { MaxTokens = 225 });
 
         result = await kernel.InvokeAsync(fixedFunction);
         Console.WriteLine(result.GetValue<string>());

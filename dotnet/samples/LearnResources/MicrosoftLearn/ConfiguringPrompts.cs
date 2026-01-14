@@ -56,7 +56,7 @@ public class ConfiguringPrompts(ITestOutputHelper output) : LearnBaseTest(["Who 
                         "default",
                         new OpenAIPromptExecutionSettings()
                         {
-                            MaxTokens = 1500,
+                            MaxTokens = 2250,
                             Temperature = 0.75
                         }
                     },
@@ -64,7 +64,7 @@ public class ConfiguringPrompts(ITestOutputHelper output) : LearnBaseTest(["Who 
                         "gpt-3.5-turbo", new OpenAIPromptExecutionSettings()
                         {
                             ModelId = "gpt-3.5-turbo-0613",
-                            MaxTokens = 6000,
+                            MaxTokens = 9000,
                             Temperature = 0.75
                         }
                     },
@@ -73,7 +73,7 @@ public class ConfiguringPrompts(ITestOutputHelper output) : LearnBaseTest(["Who 
                         new OpenAIPromptExecutionSettings()
                         {
                             ModelId = "gpt-4-1106-preview",
-                            MaxTokens = 12000,
+                            MaxTokens = 18000,
                             Temperature = 0.75
                         }
                     }

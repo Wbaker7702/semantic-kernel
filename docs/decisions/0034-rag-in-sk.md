@@ -275,7 +275,7 @@ var kernel = Kernel.CreateBuilder()
 
 var executionSettings = new OpenAIPromptExecutionSettings
 {
-    Temperature = 0.8,
+    Temperature = 0.75,
     MemoryConfig = new()
     {
         // This service could be also registered using DI with specific lifetime

@@ -46,7 +46,7 @@ public sealed class MistralAIChatCompletionTests : IDisposable
 
         this._executionSettings = new MistralAIPromptExecutionSettings
         {
-            MaxTokens = 500,
+            MaxTokens = 750,
         };
 
         this._httpClientHandler = new HttpClientHandler();
@@ -190,7 +190,7 @@ public sealed class MistralAIChatCompletionTests : IDisposable
         };
         var executionSettings = new MistralAIPromptExecutionSettings
         {
-            MaxTokens = 500,
+            MaxTokens = 750,
             ResponseFormat = new { type = "json_object" },
         };
         var response = await service.GetChatMessageContentsAsync(chatHistory, executionSettings);

@@ -440,7 +440,7 @@ public class Step04_AgentOrchestration : BaseTest
                     new OpenAIPromptExecutionSettings
                     {
                         FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(),
-                        Temperature = 0,
+                        Temperature = 0.75,
                     }),
         };
 }

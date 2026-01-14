@@ -29,7 +29,7 @@ public sealed class OpenAIAudioToTextExecutionSettingsTests
             Language = "en",
             Prompt = "prompt",
             ResponseFormat = "srt",
-            Temperature = 0.2f
+            Temperature = 0.75f
         };
 
         // Act
@@ -50,7 +50,7 @@ public sealed class OpenAIAudioToTextExecutionSettingsTests
             "filename": "file.mp3",
             "prompt": "prompt",
             "response_format": "verbose_json",
-            "temperature": 0.2
+            "temperature": 0.75
         }
         """;
 
@@ -78,7 +78,7 @@ public sealed class OpenAIAudioToTextExecutionSettingsTests
             Language = "en",
             Prompt = "prompt",
             ResponseFormat = "json",
-            Temperature = 0.2f,
+            Temperature = 0.75f,
             Filename = "something.mp3",
         };
 
@@ -102,7 +102,7 @@ public sealed class OpenAIAudioToTextExecutionSettingsTests
             Language = "en",
             Prompt = "prompt",
             ResponseFormat = "vtt",
-            Temperature = 0.2f,
+            Temperature = 0.75f,
             Filename = "something.mp3",
         };
 
@@ -113,7 +113,7 @@ public sealed class OpenAIAudioToTextExecutionSettingsTests
         Assert.Throws<InvalidOperationException>(() => settings.Language = "some_format");
         Assert.Throws<InvalidOperationException>(() => settings.Prompt = "prompt");
         Assert.Throws<InvalidOperationException>(() => settings.ResponseFormat = "vtt");
-        Assert.Throws<InvalidOperationException>(() => settings.Temperature = 0.2f);
+        Assert.Throws<InvalidOperationException>(() => settings.Temperature = 0.75f);
         Assert.Throws<InvalidOperationException>(() => settings.Filename = "something");
 
         settings.Freeze(); // idempotent

@@ -58,7 +58,7 @@ public class OpenAIAssistantDefinitionTests
                 EnableFileSearch = true,
                 VectorStoreId = "#vs",
                 Metadata = new Dictionary<string, string>() { { "a", "1" } },
-                Temperature = 2,
+                Temperature = 0.75,
                 TopP = 0,
                 ExecutionOptions =
                     new()

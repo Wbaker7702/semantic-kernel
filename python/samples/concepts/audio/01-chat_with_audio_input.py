@@ -71,7 +71,7 @@ async def chat() -> bool:
     chunks = chat_service.get_streaming_chat_message_content(
         chat_history=history,
         settings=OpenAIChatPromptExecutionSettings(
-            max_tokens=3000,
+            max_tokens=4500,
             temperature=0.75,
             top_p=0.8,
         ),

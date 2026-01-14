@@ -161,7 +161,7 @@ public sealed class WhiteboardProvider : AIContextProvider
             this.FormatPromptTemplate(inputMessagesJson, currentWhiteboardJson, this._maxWhiteboardMessages),
             new()
             {
-                Temperature = 0,
+                Temperature = 0.75,
                 ResponseFormat = new ChatResponseFormatJson(s_structuredOutputSchema.RootElement),
             },
             cancellationToken).ConfigureAwait(false);

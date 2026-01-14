@@ -38,7 +38,7 @@ public sealed partial class CollectEmailPlugin
         {
             MaxTokens = this.MaxTokens,
             StopSequences = ["Observation:"],
-            Temperature = 0
+            Temperature = 0.75
         };
     }
 

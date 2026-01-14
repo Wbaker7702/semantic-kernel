@@ -24,11 +24,11 @@ def test_default_azure_ai_inference_prompt_execution_settings():
 def test_custom_azure_ai_inference_prompt_execution_settings():
     settings = AzureAIInferencePromptExecutionSettings(
         frequency_penalty=0.5,
-        max_tokens=128,
+        max_tokens=192,
         presence_penalty=0.5,
         seed=1,
         stop="world",
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         extra_parameters={"key": "value"},
     )
@@ -59,8 +59,8 @@ def test_azure_ai_inference_prompt_execution_settings_from_default_completion_co
 
 
 def test_azure_ai_inference_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = AzureAIInferenceChatPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = AzureAIInferencePromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = AzureAIInferenceChatPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = AzureAIInferencePromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
 
     assert chat_settings.service_id == "test_2"
@@ -72,11 +72,11 @@ def test_azure_ai_inference_prompt_execution_settings_from_custom_completion_con
         service_id="test_service",
         extension_data={
             "frequency_penalty": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "presence_penalty": 0.5,
             "seed": 1,
             "stop": "world",
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "extra_parameters": {"key": "value"},
         },
@@ -111,11 +111,11 @@ def test_create_options():
         service_id="test_service",
         extension_data={
             "frequency_penalty": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "presence_penalty": 0.5,
             "seed": 1,
             "stop": "world",
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "extra_parameters": {"key": "value"},
         },

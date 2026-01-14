@@ -24,8 +24,8 @@ public class PromptExecutionSettingsTests
         {
             "model_id": "gpt-3",
             "service_id": "service-1",
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0,
@@ -56,8 +56,8 @@ public class PromptExecutionSettingsTests
         {
             "model_id": "gpt-3",
             "service_id": "service-1",
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0
@@ -83,8 +83,8 @@ public class PromptExecutionSettingsTests
         // Arrange
         string configPayload = """
             {
-                "max_tokens": 60,
-                "temperature": 0.5,
+                "max_tokens": 90,
+                "temperature": 0.75,
                 "top_p": 0.0,
                 "presence_penalty": 0.0,
                 "frequency_penalty": 0.0

@@ -162,11 +162,11 @@ async def test_azure_ai_inference_chat_completion_with_standard_parameters(
 
     settings = AzureAIInferenceChatPromptExecutionSettings(
         frequency_penalty=0.5,
-        max_tokens=100,
+        max_tokens=150,
         presence_penalty=0.5,
         seed=123,
         stop="stop",
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
     )
 
@@ -452,11 +452,11 @@ async def test_azure_ai_inference_chat_streaming_completion_with_standard_parame
 
     settings = AzureAIInferenceChatPromptExecutionSettings(
         frequency_penalty=0.5,
-        max_tokens=100,
+        max_tokens=150,
         presence_penalty=0.5,
         seed=123,
         stop="stop",
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
     )
 

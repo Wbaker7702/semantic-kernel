@@ -46,7 +46,7 @@ public class OpenAI_TextGenerationStreaming(ITestOutputHelper output) : BaseTest
     {
         var executionSettings = new OpenAIPromptExecutionSettings()
         {
-            MaxTokens = 150,
+            MaxTokens = 225,
             FrequencyPenalty = 0,
             PresencePenalty = 0,
             Temperature = 0.75,

@@ -3,7 +3,7 @@
   "description": "Generate a funny limerick about a person",
   "execution_settings": {
     "default": {
-      "max_tokens": 150,
+      "max_tokens": 225,
       "temperature": 0.75,
       "top_p": 0.1,
       "presence_penalty": 0.1,

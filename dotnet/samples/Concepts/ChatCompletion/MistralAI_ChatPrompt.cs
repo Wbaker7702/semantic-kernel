@@ -25,7 +25,7 @@ public sealed class MistralAI_ChatPrompt(ITestOutputHelper output) : BaseTest(ou
             new ChatMessageContent(AuthorRole.User, "What is the best French cheese?")
         };
         var response = await service.GetChatMessageContentsAsync(
-            chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 750 });
+            chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 1125 });
 
         foreach (var message in response)
         {
@@ -47,7 +47,7 @@ public sealed class MistralAI_ChatPrompt(ITestOutputHelper output) : BaseTest(ou
             new ChatMessageContent(AuthorRole.User, "What is the best French cheese?")
         };
         var streamingChat = service.GetStreamingChatMessageContentsAsync(
-            chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 750 });
+            chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 1125 });
 
         await foreach (var update in streamingChat)
         {
@@ -70,7 +70,7 @@ public sealed class MistralAI_ChatPrompt(ITestOutputHelper output) : BaseTest(ou
             .Build();
 
         var chatSemanticFunction = kernel.CreateFunctionFromPrompt(
-            ChatPrompt, new MistralAIPromptExecutionSettings { MaxTokens = 750 });
+            ChatPrompt, new MistralAIPromptExecutionSettings { MaxTokens = 1125 });
         var chatPromptResult = await kernel.InvokeAsync(chatSemanticFunction);
 
         Console.WriteLine(chatPromptResult);

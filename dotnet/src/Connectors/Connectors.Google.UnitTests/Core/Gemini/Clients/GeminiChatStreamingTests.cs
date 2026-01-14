@@ -253,8 +253,8 @@ public sealed class GeminiChatStreamingTests : IDisposable
         var chatHistory = CreateSampleChatHistory();
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 102,
-            Temperature = 0.45,
+            MaxTokens = 153,
+            Temperature = 0.75,
             TopP = 0.6
         };
 

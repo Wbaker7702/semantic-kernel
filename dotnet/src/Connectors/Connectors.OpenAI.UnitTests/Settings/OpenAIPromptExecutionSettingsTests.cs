@@ -50,14 +50,14 @@ public class OpenAIPromptExecutionSettingsTests
         // Arrange
         OpenAIPromptExecutionSettings actualSettings = new()
         {
-            Temperature = 0.7,
+            Temperature = 0.75,
             TopP = 0.7,
             FrequencyPenalty = 0.7,
             PresencePenalty = 0.7,
             StopSequences = ["foo", "bar"],
             ChatSystemPrompt = "chat system prompt",
             ChatDeveloperPrompt = "chat developer prompt",
-            MaxTokens = 128,
+            MaxTokens = 192,
             Logprobs = true,
             TopLogprobs = 5,
             TokenSelectionBiases = new Dictionary<int, int>() { { 1, 2 }, { 3, 4 } },
@@ -97,11 +97,11 @@ public class OpenAIPromptExecutionSettingsTests
         {
             ChatSystemPrompt = "chat system prompt",
             FrequencyPenalty = 0.7,
-            MaxTokens = 128,
+            MaxTokens = 192,
             PresencePenalty = 0.7,
             Seed = 123456,
             StopSequences = ["foo", "bar"],
-            Temperature = 0.7,
+            Temperature = 0.75,
             TopP = 0.7,
         };
 
@@ -223,7 +223,7 @@ public class OpenAIPromptExecutionSettingsTests
         // Arrange
         var json = """
             {
-              "temperature": 0.7,
+              "temperature": 0.75,
               "top_p": 0.7,
               "frequency_penalty": 0.7,
               "presence_penalty": 0.7,
@@ -233,7 +233,7 @@ public class OpenAIPromptExecutionSettingsTests
               "chat_developer_prompt": "chat developer prompt",
               "reasoning_effort": "high",
               "token_selection_biases": { "1": 2, "3": 4 },
-              "max_tokens": 128,
+              "max_tokens": 192,
               "seed": 123456,
               "logprobs": true,
               "top_logprobs": 5,
@@ -270,8 +270,8 @@ public class OpenAIPromptExecutionSettingsTests
         // Arrange
         string configPayload = """
         {
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0
@@ -294,8 +294,8 @@ public class OpenAIPromptExecutionSettingsTests
         // Arrange
         string configPayload = """
         {
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0,
@@ -318,7 +318,7 @@ public class OpenAIPromptExecutionSettingsTests
         // Assert
         Assert.True(executionSettings.IsFrozen);
         Assert.Throws<InvalidOperationException>(() => executionSettings.ModelId = "gpt-4");
-        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 1);
+        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 0.75);
         Assert.Throws<InvalidOperationException>(() => executionSettings.TopP = 1);
         Assert.Throws<NotSupportedException>(() => executionSettings.StopSequences?.Add("STOP"));
         Assert.Throws<NotSupportedException>(() => executionSettings.TokenSelectionBiases?.Add(5, 6));
@@ -408,7 +408,7 @@ public class OpenAIPromptExecutionSettingsTests
         var json =
             """
             {
-                "temperature": 0.7,
+                "temperature": 0.75,
                 "top_p": 0.7,
                 "frequency_penalty": 0.7,
                 "presence_penalty": 0.7,
@@ -421,7 +421,7 @@ public class OpenAIPromptExecutionSettingsTests
                     "1": "2",
                     "3": "4"
                 },
-                "max_tokens": 128,
+                "max_tokens": 192,
                 "logprobs": true,
                 "seed": 123456,
                 "store": true,

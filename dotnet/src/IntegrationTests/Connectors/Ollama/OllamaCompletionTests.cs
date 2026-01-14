@@ -127,7 +127,7 @@ public sealed class OllamaCompletionTests(ITestOutputHelper output) : IDisposabl
         var prompt = "Where is the most famous fish market in Seattle, Washington, USA?";
 
         // Act
-        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OllamaPromptExecutionSettings() { Temperature = 0.5f }));
+        FunctionResult actual = await target.InvokePromptAsync(prompt, new(new OllamaPromptExecutionSettings() { Temperature = 0.75f }));
 
         // Assert
         Assert.Contains("Pike Place", actual.GetValue<string>(), StringComparison.OrdinalIgnoreCase);

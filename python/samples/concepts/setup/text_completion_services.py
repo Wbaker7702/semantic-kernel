@@ -70,7 +70,7 @@ def get_openai_text_completion_service_and_request_settings() -> tuple[
     from semantic_kernel.connectors.ai.open_ai import OpenAITextCompletion, OpenAITextPromptExecutionSettings
 
     text_service = OpenAITextCompletion()
-    request_settings = OpenAITextPromptExecutionSettings(max_tokens=30, temperature=0.75, top_p=0.8)
+    request_settings = OpenAITextPromptExecutionSettings(max_tokens=45, temperature=0.75, top_p=0.8)
 
     return text_service, request_settings
 

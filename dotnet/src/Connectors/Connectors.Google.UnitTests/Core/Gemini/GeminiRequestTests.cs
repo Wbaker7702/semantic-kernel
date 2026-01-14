@@ -24,8 +24,8 @@ public sealed class GeminiRequestTests
         var prompt = "prompt-example";
         var executionSettings = new GeminiPromptExecutionSettings
         {
-            Temperature = 1.5,
-            MaxTokens = 10,
+            Temperature = 0.75,
+            MaxTokens = 15,
             TopP = 0.9,
             AudioTimestamp = true,
             ResponseMimeType = "application/json",
@@ -205,8 +205,8 @@ public sealed class GeminiRequestTests
         chatHistory.AddUserMessage("user-message2");
         var executionSettings = new GeminiPromptExecutionSettings
         {
-            Temperature = 1.5,
-            MaxTokens = 10,
+            Temperature = 0.75,
+            MaxTokens = 15,
             TopP = 0.9,
             AudioTimestamp = true,
             ResponseMimeType = "application/json"

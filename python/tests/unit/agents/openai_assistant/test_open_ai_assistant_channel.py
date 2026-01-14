@@ -89,7 +89,7 @@ def mock_assistant():
         instructions="test_instructions",
         name="test_name",
         tools=[{"type": "code_interpreter"}, {"type": "file_search"}],  # type: ignore
-        temperature=0.7,
+        temperature=0.75,
         top_p=0.9,
         response_format={"type": "json_object"},  # type: ignore
         tool_resources=ToolResources(

@@ -98,7 +98,7 @@ def get_openai_chat_completion_service_and_request_settings(
 
     chat_service = OpenAIChatCompletion(service_id=service_id, instruction_role=instruction_role)
     request_settings = OpenAIChatPromptExecutionSettings(
-        service_id=service_id, max_tokens=3000, temperature=0.75, top_p=0.8
+        service_id=service_id, max_tokens=4500, temperature=0.75, top_p=0.8
     )
 
     return chat_service, request_settings

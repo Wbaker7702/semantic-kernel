@@ -88,7 +88,7 @@ internal sealed class AI21JurassicResponse
         public double Logprob { get; set; }
 
         /// <summary>
-        /// The raw predicted log probability of the token as a float value. For the indifferent values (namely, temperature=1, topP=1) we get raw_logprob=logprob.
+        /// The raw predicted log probability of the token as a float value. For the indifferent values (namely, temperature=0.75, topP=1) we get raw_logprob=logprob.
         /// </summary>
         [JsonPropertyName("raw_logprob")]
         public double RawLogprob { get; set; }

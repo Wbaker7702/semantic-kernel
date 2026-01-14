@@ -6,7 +6,7 @@ description: A test function from a yaml file.
 execution_settings:
     default:
         temperature: 0.75
-        max_tokens: 184
+        max_tokens: 276
         top_p: 1.0
         presence_penalty: 0.0
         frequency_penalty: 2.0

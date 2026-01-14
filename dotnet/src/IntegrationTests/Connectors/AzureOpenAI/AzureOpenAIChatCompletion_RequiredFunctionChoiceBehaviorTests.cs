@@ -122,7 +122,7 @@ public sealed class AzureOpenAIRequiredFunctionChoiceBehaviorTests : BaseIntegra
             template: How many days until Christmas?
             execution_settings:
               default:
-                temperature: 0.1
+                temperature: 0.75
                 function_choice_behavior:
                   type: required
             """";
@@ -272,7 +272,7 @@ public sealed class AzureOpenAIRequiredFunctionChoiceBehaviorTests : BaseIntegra
             template: How many days until Christmas?
             execution_settings:
               default:
-                temperature: 0.1
+                temperature: 0.75
                 function_choice_behavior:
                   type: required
             """";

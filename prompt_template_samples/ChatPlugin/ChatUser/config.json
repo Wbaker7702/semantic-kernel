@@ -3,7 +3,7 @@
   "description": "A chat bot that plays a persona or role",
   "execution_settings": {
     "default": {
-      "max_tokens": 225,
+      "max_tokens": 337,
       "temperature": 0.75,
       "top_p": 0.0,
       "presence_penalty": 0.6,

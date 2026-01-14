@@ -24,7 +24,7 @@ public class MistralAI_ChatCompletion(ITestOutputHelper output) : BaseTest(outpu
         chatHistory.AddUserMessage("Hi, I'm looking for book suggestions");
         this.OutputLastMessage(chatHistory);
 
-        var reply = await chatService.GetChatMessageContentAsync(chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 300 });
+        var reply = await chatService.GetChatMessageContentAsync(chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 450 });
         Console.WriteLine(reply);
     }
 
@@ -51,7 +51,7 @@ public class MistralAI_ChatCompletion(ITestOutputHelper output) : BaseTest(outpu
         chatHistory.Add(chatMessage);
         this.OutputLastMessage(chatHistory);
 
-        var reply = await chatService.GetChatMessageContentAsync(chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 300 });
+        var reply = await chatService.GetChatMessageContentAsync(chatHistory, new MistralAIPromptExecutionSettings { MaxTokens = 450 });
         Console.WriteLine(reply);
     }
 }

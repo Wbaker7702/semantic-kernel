@@ -49,9 +49,9 @@ public class MistralAIPromptExecutionSettingsTests
         // Arrange
         string jsonSettings = """
                                 {
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "top_p": 0.9,
-                                    "max_tokens": 100,
+                                    "max_tokens": 150,
                                     "max_time": 10.0,
                                     "safe_prompt": true,
                                     "random_seed": 123
@@ -76,9 +76,9 @@ public class MistralAIPromptExecutionSettingsTests
         // Arrange  
         var settings = new MistralAIPromptExecutionSettings
         {
-            Temperature = 0.7,
+            Temperature = 0.75,
             TopP = 1,
-            MaxTokens = 100,
+            MaxTokens = 150,
             SafePrompt = false,
             Stop = ["foo", "bar"]
         };
@@ -88,9 +88,9 @@ public class MistralAIPromptExecutionSettingsTests
 
         // Assert  
         // Try to modify a property after freezing  
-        Assert.Throws<InvalidOperationException>(() => settings.Temperature = 0.8);
+        Assert.Throws<InvalidOperationException>(() => settings.Temperature = 0.75);
         Assert.Throws<InvalidOperationException>(() => settings.TopP = 0.9);
-        Assert.Throws<InvalidOperationException>(() => settings.MaxTokens = 50);
+        Assert.Throws<InvalidOperationException>(() => settings.MaxTokens = 75);
         Assert.Throws<InvalidOperationException>(() => settings.SafePrompt = true);
         Assert.Throws<NotSupportedException>(() => settings.Stop.Add("baz"));
     }

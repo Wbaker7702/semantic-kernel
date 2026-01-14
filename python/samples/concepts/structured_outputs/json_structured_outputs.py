@@ -75,7 +75,7 @@ kernel = Kernel()
 chat_completion_service, request_settings = get_chat_completion_service_and_request_settings(Services.AZURE_OPENAI)
 kernel.add_service(chat_completion_service)
 
-request_settings.max_tokens = 3000
+request_settings.max_tokens = 4500
 request_settings.temperature = 0.75
 request_settings.top_p = 0.8
 request_settings.function_choice_behavior = FunctionChoiceBehavior.Auto(filters={"excluded_plugins": ["chat"]})

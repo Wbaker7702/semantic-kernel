@@ -134,7 +134,7 @@ public sealed class OllamaTextGenerationTests : IDisposable
         string jsonSettings = """
                                 {
                                     "stop": ["stop me"],
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "top_p": 0.9,
                                     "top_k": 100
                                 }
@@ -166,7 +166,7 @@ public sealed class OllamaTextGenerationTests : IDisposable
         string jsonSettings = """
                                 {
                                     "stop": ["stop me"],
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "top_p": 0.9,
                                     "top_k": 100
                                 }

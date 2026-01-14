@@ -3,7 +3,7 @@
   "description": "Given a query and a list of possible intents, detect which intent the input matches",
   "execution_settings": {
     "default": {
-      "max_tokens": 150,
+      "max_tokens": 225,
       "temperature": 0.75,
       "top_p": 1.0,
       "presence_penalty": 0.0,

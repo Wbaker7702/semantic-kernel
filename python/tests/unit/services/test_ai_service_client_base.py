@@ -23,7 +23,7 @@ def test_get_execution_settings_class():
 
 def test_instantiate_prompt_execution_settings():
     service = AIServiceClientBase(ai_model_id="ai_model_id")
-    settings = service.instantiate_prompt_execution_settings(max_tokens=25, temperature=0.7, top_p=0.5)
+    settings = service.instantiate_prompt_execution_settings(max_tokens=37, temperature=0.75, top_p=0.5)
     assert settings.extension_data["max_tokens"] == 25
     assert settings.extension_data["temperature"] == 0.7
     assert settings.extension_data["top_p"] == 0.5
@@ -32,7 +32,7 @@ def test_instantiate_prompt_execution_settings():
 def test_get_prompt_execution_settings_from_settings():
     service = AIServiceClientBase(ai_model_id="ai_model_id")
     settings = PromptExecutionSettings(
-        service_id="service", extension_data={"max_tokens": 25, "temperature": 0.7, "top_p": 0.5}
+        service_id="service", extension_data={"max_tokens": 37, "temperature": 0.75, "top_p": 0.5}
     )
     new_settings = service.get_prompt_execution_settings_from_settings(settings)
     assert new_settings.extension_data["max_tokens"] == 25

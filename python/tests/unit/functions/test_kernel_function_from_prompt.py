@@ -284,8 +284,8 @@ def test_create_with_multiple_settings():
         prompt_template_config=PromptTemplateConfig(
             template="test",
             execution_settings=[
-                PromptExecutionSettings(service_id="test", temperature=0.0),
-                PromptExecutionSettings(service_id="test2", temperature=1.0),
+                PromptExecutionSettings(service_id="test", temperature=0.75),
+                PromptExecutionSettings(service_id="test2", temperature=0.75),
             ],
         ),
     )
@@ -306,8 +306,8 @@ async def test_create_with_multiple_settings_one_service_registered(openai_unit_
         prompt_template_config=PromptTemplateConfig(
             template="test",
             execution_settings=[
-                PromptExecutionSettings(service_id="test", temperature=0.0),
-                PromptExecutionSettings(service_id="test2", temperature=1.0),
+                PromptExecutionSettings(service_id="test", temperature=0.75),
+                PromptExecutionSettings(service_id="test2", temperature=0.75),
             ],
         ),
     )

@@ -47,11 +47,11 @@ def test_default_openai_chat_prompt_execution_settings():
 
 def test_custom_openai_chat_prompt_execution_settings():
     settings = OpenAIChatPromptExecutionSettings(
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         presence_penalty=0.5,
         frequency_penalty=0.5,
-        max_tokens=128,
+        max_tokens=192,
         stop="\n",
         number_of_responses=2,
         logit_bias={"1": 1},
@@ -83,8 +83,8 @@ def test_openai_chat_prompt_execution_settings_from_default_completion_config():
 
 
 def test_openai_chat_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = OpenAIChatPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = OpenAIChatPromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = OpenAIChatPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = OpenAIChatPromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
     assert chat_settings.service_id == "test_2"
     assert chat_settings.temperature == 0.0
@@ -105,11 +105,11 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config():
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "presence_penalty": 0.5,
             "frequency_penalty": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "stop": ["\n"],
             "number_of_responses": 2,
             "logprobs": 1,
@@ -132,11 +132,11 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config_wit
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "presence_penalty": 0.5,
             "frequency_penalty": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "stop": ["\n"],
             "number_of_responses": 2,
             "functions": None,
@@ -160,11 +160,11 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config_wit
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "presence_penalty": 0.5,
             "frequency_penalty": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "stop": ["\n"],
             "number_of_responses": 2,
             "functions": [{}],
@@ -187,11 +187,11 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config_wit
 
 def test_create_options():
     settings = OpenAIChatPromptExecutionSettings(
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         presence_penalty=0.5,
         frequency_penalty=0.5,
-        max_tokens=128,
+        max_tokens=192,
         stop=["\n"],
         number_of_responses=2,
         logit_bias={"1": 1},

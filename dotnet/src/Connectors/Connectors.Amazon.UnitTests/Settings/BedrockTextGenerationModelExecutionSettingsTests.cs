@@ -221,7 +221,7 @@ public class BedrockTextGenerationModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonTitanExecutionSettings()
         {
-            Temperature = 0.1f,
+            Temperature = 0.75f,
             TopP = 0.95f,
             MaxTokenCount = 256,
             StopSequences = new List<string> { "</end>" },
@@ -438,9 +438,9 @@ public class BedrockTextGenerationModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonJambaExecutionSettings()
         {
-            Temperature = 0.8f,
+            Temperature = 0.75f,
             TopP = 0.95f,
-            MaxTokens = 256,
+            MaxTokens = 384,
             Stop = new List<string> { "</end>" },
             NumberOfResponses = 1,
             FrequencyPenalty = 0.0,
@@ -836,9 +836,9 @@ public class BedrockTextGenerationModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonCommandExecutionSettings()
         {
-            Temperature = 0.8,
+            Temperature = 0.75,
             TopP = 0.95,
-            MaxTokens = 256,
+            MaxTokens = 384,
             StopSequences = new List<string> { "</end>" },
             ModelId = modelId
         };
@@ -1014,9 +1014,9 @@ public class BedrockTextGenerationModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonMistralExecutionSettings()
         {
-            Temperature = 0.8f,
+            Temperature = 0.75f,
             TopP = 0.95f,
-            MaxTokens = 256,
+            MaxTokens = 384,
             ModelId = modelId,
         };
         mockBedrockApi.Setup(m => m.DetermineServiceOperationEndpoint(It.IsAny<InvokeModelRequest>()))

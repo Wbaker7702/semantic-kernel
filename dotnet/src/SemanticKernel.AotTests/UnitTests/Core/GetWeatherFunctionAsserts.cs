@@ -48,7 +48,7 @@ internal static class GetWeatherFunctionAsserts
         // Assert the function result
         FunctionResult functionResult = await function.InvokeAsync(kernel, arguments);
 
-        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 61F, condition: rainy)", functionResult.ToString());
+        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 0.75F, condition: rainy)", functionResult.ToString());
     }
 
     internal static async Task AssertPromptFunctionSchemaAndStreamedInvocationResult(Kernel kernel, KernelFunction function)
@@ -70,6 +70,6 @@ internal static class GetWeatherFunctionAsserts
             contentBuilder.Append(content);
         }
 
-        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 61F, condition: rainy)", contentBuilder.ToString());
+        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 0.75F, condition: rainy)", contentBuilder.ToString());
     }
 }

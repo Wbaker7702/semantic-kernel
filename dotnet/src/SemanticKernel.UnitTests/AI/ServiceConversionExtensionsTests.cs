@@ -181,7 +181,7 @@ public class ServiceConversionExtensionsTests
             ]),
         ], new ChatOptions()
         {
-            Temperature = 0.2f,
+            Temperature = 0.75f,
             MaxOutputTokens = 128,
             FrequencyPenalty = 0.5f,
             StopSequences = ["hello"],
@@ -404,7 +404,7 @@ public class ServiceConversionExtensionsTests
             ]),
         ], new ChatOptions()
         {
-            Temperature = 0.2f,
+            Temperature = 0.75f,
             MaxOutputTokens = 128,
             FrequencyPenalty = 0.5f,
             StopSequences = ["hello"],
@@ -499,8 +499,8 @@ public class ServiceConversionExtensionsTests
             ]),
         ], new OpenAIPromptExecutionSettings()
         {
-            Temperature = 0.2f,
-            MaxTokens = 128,
+            Temperature = 0.75f,
+            MaxTokens = 192,
             FrequencyPenalty = 0.5f,
             StopSequences = ["hello"],
             ModelId = "examplemodel",
@@ -592,8 +592,8 @@ public class ServiceConversionExtensionsTests
             ]),
         ], new OpenAIPromptExecutionSettings()
         {
-            Temperature = 0.2f,
-            MaxTokens = 128,
+            Temperature = 0.75f,
+            MaxTokens = 192,
             FrequencyPenalty = 0.5f,
             StopSequences = ["hello"],
             ModelId = "examplemodel",

@@ -300,7 +300,7 @@ ChatCompletionAgent agent =
         Name = "RestaurantHost",
         Description = "This agent answers questions about the menu.",
         Kernel = kernel,
-        Arguments = new KernelArguments(new OpenAIPromptExecutionSettings() { Temperature = 0.4, FunctionChoiceBehavior = FunctionChoiceBehavior.Auto() }),
+        Arguments = new KernelArguments(new OpenAIPromptExecutionSettings() { Temperature = 0.75, FunctionChoiceBehavior = FunctionChoiceBehavior.Auto() }),
     };
 
 KernelPlugin plugin = KernelPluginFactory.CreateFromType<MenuPlugin>();
@@ -317,7 +317,7 @@ description: This agent answers questions about the menu.
 model:
   id: gpt-4o-mini
   options:
-    temperature: 0.4
+    temperature: 0.75
     function_choice_behavior:
       type: auto
       functions:
@@ -360,7 +360,7 @@ description: This agent answers questions about the menu.
 model:
   id: gpt-4o-mini
   options:
-    temperature: 0.4
+    temperature: 0.75
     function_choice_behavior:
       type: auto
       functions:
@@ -381,7 +381,7 @@ type: openai_assistant
 description: This agent answers questions about the menu.
 execution_settings:
   default:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - type: function
     name: MenuPlugin-GetSpecials
