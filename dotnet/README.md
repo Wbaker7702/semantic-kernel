@@ -43,7 +43,7 @@ var prompt = @"{{$input}}
 
 One line TLDR with the fewest words.";
 
-var summarize = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 100 });
+var summarize = kernel.CreateFunctionFromPrompt(prompt, executionSettings: new OpenAIPromptExecutionSettings { MaxTokens = 150 });
 
 string text1 = @"
 1st Law of Thermodynamics - Energy cannot be created or destroyed.

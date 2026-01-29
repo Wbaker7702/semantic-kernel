@@ -58,9 +58,9 @@ public class BedrockChatCompletionModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonMistralExecutionSettings()
         {
-            Temperature = 0.0f,
+            Temperature = 0.75f,
             TopP = 0.0f,
-            MaxTokens = 10,
+            MaxTokens = 15,
             ModelId = modelId,
             ExtensionData = new Dictionary<string, object>()
             {
@@ -181,7 +181,7 @@ public class BedrockChatCompletionModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonTitanExecutionSettings()
         {
-            Temperature = 0.3f,
+            Temperature = 0.75f,
             TopP = 0.8f,
             MaxTokenCount = 510,
             ModelId = modelId
@@ -295,7 +295,7 @@ public class BedrockChatCompletionModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonClaudeExecutionSettings()
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             TopP = 0.7f,
             MaxTokensToSample = 512,
             ModelId = modelId
@@ -466,9 +466,9 @@ public class BedrockChatCompletionModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonCommandRExecutionSettings()
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             TopP = 0.9f,
-            MaxTokens = 202,
+            MaxTokens = 303,
             ModelId = modelId,
         };
         mockBedrockApi.Setup(m => m.DetermineServiceOperationEndpoint(It.IsAny<ConverseRequest>()))
@@ -522,7 +522,7 @@ public class BedrockChatCompletionModelExecutionSettingsTests
         var mockBedrockApi = new Mock<IAmazonBedrockRuntime>();
         var executionSettings = new AmazonJambaExecutionSettings()
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             ModelId = modelId,
             ExtensionData = new Dictionary<string, object>()
             {

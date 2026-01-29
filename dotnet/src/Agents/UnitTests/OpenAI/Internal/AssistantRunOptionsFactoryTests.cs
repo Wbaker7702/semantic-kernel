@@ -25,7 +25,7 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
                 AdditionalInstructions = "test",
             };
 
@@ -53,13 +53,13 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
             };
 
         RunCreationOptions invocationOptions =
             new()
             {
-                Temperature = 0.5F,
+                Temperature = 0.75F,
             };
 
         // Act
@@ -83,7 +83,7 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
                 TruncationStrategy = RunTruncationStrategy.CreateLastMessagesStrategy(5),
             };
 
@@ -92,7 +92,7 @@ public class AssistantRunOptionsFactoryTests
             {
                 ModelOverride = "gpt-anything",
                 AdditionalInstructions = "test2",
-                Temperature = 0.9F,
+                Temperature = 0.75F,
                 TruncationStrategy = RunTruncationStrategy.CreateLastMessagesStrategy(8),
                 ResponseFormat = AssistantResponseFormat.JsonObject,
             };
@@ -120,7 +120,7 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
                 TruncationStrategy = RunTruncationStrategy.CreateLastMessagesStrategy(5),
             };
 
@@ -181,7 +181,7 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
                 MaxOutputTokenCount = 4096,
                 MaxInputTokenCount = 1024,
             };
@@ -205,7 +205,7 @@ public class AssistantRunOptionsFactoryTests
             new()
             {
                 ModelOverride = "gpt-anything",
-                Temperature = 0.5F,
+                Temperature = 0.75F,
                 MaxOutputTokenCount = 4096,
                 MaxInputTokenCount = 1024,
                 AdditionalInstructions = "DefaultInstructions"

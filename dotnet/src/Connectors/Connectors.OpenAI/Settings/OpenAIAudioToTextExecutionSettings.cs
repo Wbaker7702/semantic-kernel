@@ -177,7 +177,7 @@ public sealed class OpenAIAudioToTextExecutionSettings : PromptExecutionSettings
 
     private const string DefaultFilename = "file.mp3";
 
-    private float? _temperature = 0;
+    private float? _temperature = 0.75;
     private string? _responseFormat;
     private string _filename;
     private string? _language;

@@ -32,7 +32,7 @@ internal static class KernelFunctionSamples
 
         // Create a kernel function.
         KernelFunction function = KernelFunctionFactory.CreateFromMethod(
-            method: (Location location) => location.City == "Boston" ? new Weather { Temperature = 61, Condition = "rainy" } : throw new NotImplementedException(),
+            method: (Location location) => location.City == "Boston" ? new Weather { Temperature = 0.75, Condition = "rainy" } : throw new NotImplementedException(),
             jsonSerializerOptions: options);
 
         // Invoke the function

@@ -20,9 +20,9 @@ def test_default_anthropic_chat_prompt_execution_settings():
 
 def test_custom_anthropic_chat_prompt_execution_settings():
     settings = AnthropicChatPromptExecutionSettings(
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
-        max_tokens=128,
+        max_tokens=192,
         messages=[{"role": "system", "content": "Hello"}],
     )
     assert settings.temperature == 0.5
@@ -41,8 +41,8 @@ def test_anthropic_chat_prompt_execution_settings_from_default_completion_config
 
 
 def test_anthropic_chat_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = AnthropicChatPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = AnthropicChatPromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = AnthropicChatPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = AnthropicChatPromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
     assert chat_settings.service_id == "test_2"
     assert chat_settings.temperature == 0.0
@@ -52,9 +52,9 @@ def test_anthropic_chat_prompt_execution_settings_from_custom_completion_config(
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "messages": [{"role": "system", "content": "Hello"}],
         },
     )
@@ -68,9 +68,9 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config_wit
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "messages": [{"role": "system", "content": "Hello"}],
         },
     )
@@ -84,9 +84,9 @@ def test_openai_chat_prompt_execution_settings_from_custom_completion_config_wit
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "tools": [{}],
             "messages": [{"role": "system", "content": "Hello"}],
         },
@@ -101,9 +101,9 @@ def test_create_options():
     settings = AnthropicChatPromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
-            "max_tokens": 128,
+            "max_tokens": 192,
             "tools": [{}],
             "messages": [{"role": "system", "content": "Hello"}],
         },
@@ -119,9 +119,9 @@ def test_tool_choice_none():
         AnthropicChatPromptExecutionSettings(
             service_id="test_service",
             extension_data={
-                "temperature": 0.5,
+                "temperature": 0.75,
                 "top_p": 0.5,
-                "max_tokens": 128,
+                "max_tokens": 192,
                 "tool_choice": {"type": "none"},
                 "messages": [{"role": "system", "content": "Hello"}],
             },

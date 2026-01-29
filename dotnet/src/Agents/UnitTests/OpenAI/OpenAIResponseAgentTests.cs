@@ -474,7 +474,7 @@ public sealed class OpenAIResponseAgentTests : BaseOpenAIResponseClientTest
             "generate_summary": null
           },
           "store": true,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "text": {
             "format": {
               "type": "text"
@@ -503,11 +503,11 @@ public sealed class OpenAIResponseAgentTests : BaseOpenAIResponseClientTest
     private const string InvokeStreamingResponse =
         """
         content block 0: event: response.created
-        data: {"type":"response.created","sequence_number":0,"response":{"id":"resp_68383e45be4081919b7bad84c27e436b0f0f17949d11ddcf","object":"response","created_at":1748516421,"status":"in_progress","background":false,"error":null,"incomplete_details":null,"instructions":"Answer all queries in English and French.\nRespond to all user questions with 'Computer says no'.","max_output_tokens":null,"model":"gpt-4o-mini-2024-07-18","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"service_tier":"auto","store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":"UnnamedAgent","metadata":{}}}
+        data: {"type":"response.created","sequence_number":0,"response":{"id":"resp_68383e45be4081919b7bad84c27e436b0f0f17949d11ddcf","object":"response","created_at":1748516421,"status":"in_progress","background":false,"error":null,"incomplete_details":null,"instructions":"Answer all queries in English and French.\nRespond to all user questions with 'Computer says no'.","max_output_tokens":null,"model":"gpt-4o-mini-2024-07-18","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"service_tier":"auto","store":true,"temperature":0.75,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":"UnnamedAgent","metadata":{}}}
 
         event: response.in_progress
         
-        data: {"type":"response.in_progress","sequence_number":1,"response":{"id":"resp_68383e45be4081919b7bad84c27e436b0f0f17949d11ddcf","object":"response","created_at":1748516421,"status":"in_progress","background":false,"error":null,"incomplete_details":null,"instructions":"Answer all queries in English and French.\nRespond to all user questions with 'Computer says no'.","max_output_tokens":null,"model":"gpt-4o-mini-2024-07-18","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"service_tier":"auto","store":true,"temperature":1.0,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":"UnnamedAgent","metadata":{}}}
+        data: {"type":"response.in_progress","sequence_number":1,"response":{"id":"resp_68383e45be4081919b7bad84c27e436b0f0f17949d11ddcf","object":"response","created_at":1748516421,"status":"in_progress","background":false,"error":null,"incomplete_details":null,"instructions":"Answer all queries in English and French.\nRespond to all user questions with 'Computer says no'.","max_output_tokens":null,"model":"gpt-4o-mini-2024-07-18","output":[],"parallel_tool_calls":true,"previous_response_id":null,"reasoning":{"effort":null,"summary":null},"service_tier":"auto","store":true,"temperature":0.75,"text":{"format":{"type":"text"}},"tool_choice":"auto","tools":[],"top_p":1.0,"truncation":"disabled","usage":null,"user":"UnnamedAgent","metadata":{}}}
 
         content block 2: event: response.output_item.added
         data: {"type":"response.output_item.added","sequence_number":2,"output_index":0,"item":{"id":"msg_68383e4655b48191beb9f496d37dca950f0f17949d11ddcf","type":"message","status":"in_progress","content":[],"role":"assistant"}}
@@ -571,7 +571,7 @@ public sealed class OpenAIResponseAgentTests : BaseOpenAIResponseClientTest
           },
           "service_tier": "default",
           "store": true,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "text": {
             "format": {
               "type": "text"
@@ -660,7 +660,7 @@ public sealed class OpenAIResponseAgentTests : BaseOpenAIResponseClientTest
           },
           "service_tier": "default",
           "store": true,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "text": {
             "format": {
               "type": "text"

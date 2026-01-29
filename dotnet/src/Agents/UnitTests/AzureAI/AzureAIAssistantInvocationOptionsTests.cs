@@ -62,7 +62,7 @@ public class AzureAIAssistantInvocationOptionsTests
                 MaxPromptTokens = 1000,
                 ParallelToolCallsEnabled = false,
                 TruncationMessageCount = 12,
-                Temperature = 2,
+                Temperature = 0.75,
                 TopP = 0,
                 EnableCodeInterpreter = true,
                 EnableJsonResponse = true,

@@ -108,7 +108,7 @@ async def create_with_data_chat_function(kernel: Kernel, create_memory_store):
 
         exec_settings = PromptExecutionSettings(
             service_id="chat-gpt-extensions",
-            extension_data={"max_tokens": 2000, "temperature": 0.7, "top_p": 0.8, "extra_body": extra},
+            extension_data={"max_tokens": 3000, "temperature": 0.75, "top_p": 0.8, "extra_body": extra},
         )
 
         prompt_template_config = PromptTemplateConfig(

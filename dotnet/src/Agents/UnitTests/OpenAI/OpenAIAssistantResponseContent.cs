@@ -621,7 +621,7 @@ internal static class OpenAIAssistantResponseContent
               "file_ids": [],
               "metadata": {},
               "usage": null,
-              "temperature": 1
+              "temperature": 0.75
             }
             """;
 
@@ -646,7 +646,7 @@ internal static class OpenAIAssistantResponseContent
               "file_ids": [],
               "metadata": {},
               "usage": null,
-              "temperature": 1
+              "temperature": 0.75
             }
             """;
 
@@ -671,7 +671,7 @@ internal static class OpenAIAssistantResponseContent
               "file_ids": [],
               "metadata": {},
               "usage": null,
-              "temperature": 1
+              "temperature": 0.75
             }
             """;
 
@@ -839,7 +839,7 @@ internal static class OpenAIAssistantResponseContent
                       "instructions": "test",
                       "tools": [],
                       "metadata": {},
-                      "temperature": 1.0,
+                      "temperature": 0.75,
                       "top_p": 1.0,
                       "truncation_strategy": { "type": "auto" },
                       "incomplete_details": null,

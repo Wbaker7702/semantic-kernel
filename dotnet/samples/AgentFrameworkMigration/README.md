@@ -234,7 +234,7 @@ public class MenuTools
 **Problem**: Complex options setup in SK
 
 ```csharp
-OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1000 };
+OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1500 };
 AgentInvokeOptions options = new() { KernelArguments = new(settings) };
 ```
 

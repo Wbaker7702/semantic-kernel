@@ -17,8 +17,8 @@ public class PromptTemplateConfigTests
         // Arrange
         string configPayload = """
             {
-                "max_tokens": 60,
-                "temperature": 0.5,
+                "max_tokens": 90,
+                "temperature": 0.75,
                 "top_p": 0.0,
                 "presence_penalty": 0.0,
                 "frequency_penalty": 0.0
@@ -39,8 +39,8 @@ public class PromptTemplateConfigTests
         // Arrange
         string configPayload = """
             {
-                "max_tokens": 60,
-                "temperature": 0.5,
+                "max_tokens": 90,
+                "temperature": 0.75,
                 "top_p": 0.0,
                 "presence_penalty": 0.0,
                 "frequency_penalty": 0.0,
@@ -69,8 +69,8 @@ public class PromptTemplateConfigTests
               {
                 "service1": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -82,8 +82,8 @@ public class PromptTemplateConfigTests
                 },
                 "service2": {
                   "model_id": "gpt-3.5_turbo",
-                  "max_tokens": 256,
-                  "temperature": 0.3,
+                  "max_tokens": 384,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -118,8 +118,8 @@ public class PromptTemplateConfigTests
               {
                 "service1": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -131,8 +131,8 @@ public class PromptTemplateConfigTests
                 },
                 "service2": {
                   "model_id": "gpt-3.5_turbo",
-                  "max_tokens": 256,
-                  "temperature": 0.3,
+                  "max_tokens": 384,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -167,8 +167,8 @@ public class PromptTemplateConfigTests
               {
                 "default": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -203,8 +203,8 @@ public class PromptTemplateConfigTests
               {
                 "service1": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -217,8 +217,8 @@ public class PromptTemplateConfigTests
                 "service2": {
                   "service_id": "service3",
                   "model_id": "gpt-3.5_turbo",
-                  "max_tokens": 256,
-                  "temperature": 0.3,
+                  "max_tokens": 384,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -302,8 +302,8 @@ public class PromptTemplateConfigTests
               {
                 "service1": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -315,8 +315,8 @@ public class PromptTemplateConfigTests
                 },
                 "service1": {
                   "model_id": "gpt-3.5_turbo",
-                  "max_tokens": 256,
-                  "temperature": 0.3,
+                  "max_tokens": 384,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -353,8 +353,8 @@ public class PromptTemplateConfigTests
               {
                 "default": {
                   "model_id": "gpt-4",
-                  "max_tokens": 200,
-                  "temperature": 0.2,
+                  "max_tokens": 300,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,

@@ -27,7 +27,7 @@ def test_custom_google_ai_prompt_execution_settings():
         response_mime_type="text/plain",
         candidate_count=1,
         max_output_tokens=128,
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         top_k=10,
     )
@@ -57,8 +57,8 @@ def test_google_ai_prompt_execution_settings_from_default_completion_config():
 
 
 def test_google_ai_prompt_execution_settings_from_openai_prompt_execution_settings():
-    chat_settings = GoogleAIChatPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = GoogleAIPromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = GoogleAIChatPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = GoogleAIPromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
 
     assert chat_settings.service_id == "test_2"
@@ -73,7 +73,7 @@ def test_google_ai_prompt_execution_settings_from_custom_completion_config():
             "response_mime_type": "text/plain",
             "candidate_count": 1,
             "max_output_tokens": 128,
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "top_k": 10,
         },
@@ -109,7 +109,7 @@ def test_create_options():
             "response_mime_type": "text/plain",
             "candidate_count": 1,
             "max_output_tokens": 128,
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "top_k": 10,
         },

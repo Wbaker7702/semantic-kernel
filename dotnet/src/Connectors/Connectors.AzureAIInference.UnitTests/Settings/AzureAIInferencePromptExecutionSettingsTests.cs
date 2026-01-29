@@ -37,12 +37,12 @@ public sealed class AzureAIInferencePromptExecutionSettingsTests
         // Arrange
         AzureAIInferencePromptExecutionSettings actualSettings = new()
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             NucleusSamplingFactor = 0.7f,
             FrequencyPenalty = 0.7f,
             PresencePenalty = 0.7f,
             StopSequences = ["foo", "bar"],
-            MaxTokens = 128
+            MaxTokens = 192
         };
 
         // Act
@@ -132,12 +132,12 @@ public sealed class AzureAIInferencePromptExecutionSettingsTests
         // Arrange
         var json = """
             {
-              "temperature": 0.7,
+              "temperature": 0.75,
               "top_p": 0.7,
               "frequency_penalty": 0.7,
               "presence_penalty": 0.7,
               "stop": [ "foo", "bar" ],
-              "max_tokens": 128,
+              "max_tokens": 192,
               "response_format": "text",
               "seed": 123456
             }
@@ -157,8 +157,8 @@ public sealed class AzureAIInferencePromptExecutionSettingsTests
         // Arrange
         string configPayload = """
         {
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0
@@ -181,8 +181,8 @@ public sealed class AzureAIInferencePromptExecutionSettingsTests
         // Arrange
         string configPayload = """
         {
-            "max_tokens": 60,
-            "temperature": 0.5,
+            "max_tokens": 90,
+            "temperature": 0.75,
             "top_p": 0.0,
             "presence_penalty": 0.0,
             "frequency_penalty": 0.0,
@@ -199,11 +199,11 @@ public sealed class AzureAIInferencePromptExecutionSettingsTests
         // Assert
         Assert.True(executionSettings.IsFrozen);
         Assert.Throws<InvalidOperationException>(() => executionSettings.ModelId = "new-model");
-        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 1);
+        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 0.75);
         Assert.Throws<InvalidOperationException>(() => executionSettings.FrequencyPenalty = 1);
         Assert.Throws<InvalidOperationException>(() => executionSettings.PresencePenalty = 1);
         Assert.Throws<InvalidOperationException>(() => executionSettings.NucleusSamplingFactor = 1);
-        Assert.Throws<InvalidOperationException>(() => executionSettings.MaxTokens = 100);
+        Assert.Throws<InvalidOperationException>(() => executionSettings.MaxTokens = 150);
         Assert.Throws<InvalidOperationException>(() => executionSettings.ResponseFormat = "text");
         Assert.Throws<NotSupportedException>(() => executionSettings.StopSequences?.Add("STOP"));
         Assert.Throws<NotSupportedException>(() => executionSettings.ExtensionData["new"] = 6);

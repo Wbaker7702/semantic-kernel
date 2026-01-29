@@ -142,8 +142,8 @@ public sealed class AzureOpenAIChatCompletionServiceTests : IDisposable
         var service = new AzureOpenAIChatCompletionService("deployment", "https://endpoint", "api-key", "model-id", this._httpClient);
         var settings = new AzureOpenAIPromptExecutionSettings()
         {
-            MaxTokens = 123,
-            Temperature = 0.6,
+            MaxTokens = 184,
+            Temperature = 0.75,
             TopP = 0.5,
             FrequencyPenalty = 1.6,
             PresencePenalty = 1.2,
@@ -283,7 +283,7 @@ public sealed class AzureOpenAIChatCompletionServiceTests : IDisposable
         var settings = new AzureOpenAIPromptExecutionSettings
         {
             SetNewMaxCompletionTokensEnabled = useNewMaxTokens,
-            MaxTokens = 123
+            MaxTokens = 184
         };
 
         using var responseMessage = new HttpResponseMessage(HttpStatusCode.OK)

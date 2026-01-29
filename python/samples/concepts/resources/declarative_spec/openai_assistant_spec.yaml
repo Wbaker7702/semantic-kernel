@@ -7,7 +7,7 @@ model:
   connection:
     api_key: ${OpenAI:ApiKey}
   options:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - id: MenuPlugin.get_specials
     type: function

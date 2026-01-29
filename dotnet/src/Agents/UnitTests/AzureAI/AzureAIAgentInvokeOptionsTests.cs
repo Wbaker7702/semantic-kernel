@@ -31,7 +31,7 @@ public class AzureAIAgentInvokeOptionsTests
             MaxPromptTokens = 50,
             ParallelToolCallsEnabled = true,
             TruncationMessageCount = 10,
-            Temperature = 0.5f,
+            Temperature = 0.75f,
             TopP = 0.9f,
             Metadata = new Dictionary<string, string> { { "key", "value" } }
         };

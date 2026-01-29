@@ -46,8 +46,8 @@ async def main():
         ),
         execution_settings=OpenAIChatPromptExecutionSettings(
             service_id="default",
-            temperature=0.0,
-            max_tokens=1000,
+            temperature=0.75,
+            max_tokens=2250,
             function_choice_behavior=FunctionChoiceBehavior.Auto(),
         ),
         plugin_name="Chat",

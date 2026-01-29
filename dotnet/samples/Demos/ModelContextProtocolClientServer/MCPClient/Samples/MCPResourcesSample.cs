@@ -41,7 +41,7 @@ internal sealed class MCPResourcesSample : BaseSample
         // Enable automatic function calling
         OpenAIPromptExecutionSettings executionSettings = new()
         {
-            Temperature = 0,
+            Temperature = 0.75,
             FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(options: new() { RetainArgumentTypes = true })
         };
 

@@ -13,7 +13,7 @@ internal sealed class KernelExtensions_KernelFunctionTests
 {
     private static readonly Kernel s_kernel = new();
 
-    private static readonly Func<Location, Weather> s_lambda = location => location.City == "Boston" ? new Weather { Temperature = 61, Condition = "rainy" } : throw new NotImplementedException();
+    private static readonly Func<Location, Weather> s_lambda = location => location.City == "Boston" ? new Weather { Temperature = 0.75, Condition = "rainy" } : throw new NotImplementedException();
 
     private static readonly JsonSerializerOptions s_jsonSerializerOptions = new()
     {
@@ -78,6 +78,6 @@ internal sealed class KernelExtensions_KernelFunctionTests
 
     private static Weather GetWeather(Location location)
     {
-        return location.City == "Boston" ? new Weather { Temperature = 61, Condition = "rainy" } : throw new NotImplementedException();
+        return location.City == "Boston" ? new Weather { Temperature = 0.75, Condition = "rainy" } : throw new NotImplementedException();
     }
 }

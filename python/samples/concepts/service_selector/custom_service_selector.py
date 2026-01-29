@@ -59,8 +59,8 @@ kernel.add_function(
         template="Always respond with your name. {{$chat_history}}", allow_dangerously_set_content=True
     ),
     prompt_execution_settings={
-        "gpt-4o": PromptExecutionSettings(service_id="gpt-4o", max_tokens=200, temperature=0.0),
-        "gpt-3.5-turbo": PromptExecutionSettings(service_id="gpt-3.5-turbo", max_tokens=400, temperature=1.0),
+        "gpt-4o": PromptExecutionSettings(service_id="gpt-4o", max_tokens=450, temperature=0.75),
+        "gpt-3.5-turbo": PromptExecutionSettings(service_id="gpt-3.5-turbo", max_tokens=900, temperature=0.75),
     },
 )
 

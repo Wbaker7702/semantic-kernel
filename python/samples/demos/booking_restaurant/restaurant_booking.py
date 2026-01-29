@@ -57,8 +57,8 @@ chat_function = kernel.add_function(
 settings: OpenAIChatPromptExecutionSettings = kernel.get_prompt_execution_settings_from_service_id(
     service_id, ChatCompletionClientBase
 )
-settings.max_tokens = 2000
-settings.temperature = 0.1
+settings.max_tokens = 4500
+settings.temperature = 0.75
 settings.top_p = 0.8
 settings.function_choice_behavior.Auto(filters={"exclude_plugin": ["ChatBot"]})
 

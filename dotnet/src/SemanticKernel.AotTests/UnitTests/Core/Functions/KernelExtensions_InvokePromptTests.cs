@@ -35,7 +35,7 @@ internal sealed class KernelExtensions_InvokePromptTests
         FunctionResult functionResult = await kernel.InvokePromptAsync(s_jsonSerializerOptions, prompt, arguments);
 
         // Assert
-        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 61F, condition: rainy)", functionResult.ToString());
+        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 0.75F, condition: rainy)", functionResult.ToString());
     }
 
     public static async Task InvokePromptStreaming()
@@ -60,6 +60,6 @@ internal sealed class KernelExtensions_InvokePromptTests
         }
 
         // Assert
-        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 61F, condition: rainy)", contentBuilder.ToString());
+        Assert.AreEqual("Is it suitable for hiking today? - Current weather(temperature: 0.75F, condition: rainy)", contentBuilder.ToString());
     }
 }

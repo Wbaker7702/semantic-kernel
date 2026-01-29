@@ -153,8 +153,8 @@ public sealed class HuggingFaceStreamingChatCompletionTests : IDisposable
         var chatHistory = CreateSampleChatHistory();
         var executionSettings = new HuggingFacePromptExecutionSettings()
         {
-            MaxTokens = 102,
-            Temperature = 0.45f,
+            MaxTokens = 153,
+            Temperature = 0.75f,
             TopP = 0.6f,
             LogProbs = true,
             Seed = 123,

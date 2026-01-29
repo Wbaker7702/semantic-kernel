@@ -48,7 +48,7 @@ template_format: handlebars
 description: <The agent description>
 execution_settings:
   default:
-    temperature: 0
+    temperature: 0.75
 ```
 
 - `name`: This property defines the name of the agent. For example, `SupportBot` could be a name for an agent that provides customer support.

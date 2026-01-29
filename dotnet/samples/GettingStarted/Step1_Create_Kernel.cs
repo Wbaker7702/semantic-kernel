@@ -41,7 +41,7 @@ public sealed class Step1_Create_Kernel(ITestOutputHelper output) : BaseTest(out
         Console.WriteLine(string.Empty);
 
         // Example 4. Invoke the kernel with a templated prompt and execution settings
-        arguments = new(new OpenAIPromptExecutionSettings { MaxTokens = 500, Temperature = 0.5 }) { { "topic", "dogs" } };
+        arguments = new(new OpenAIPromptExecutionSettings { MaxTokens = 1125, Temperature = 0.75 }) { { "topic", "dogs" } };
         Console.WriteLine(await kernel.InvokePromptAsync("Tell me a story about {{$topic}}", arguments));
 
         // Example 5. Invoke the kernel with a templated prompt and execution settings configured to return JSON

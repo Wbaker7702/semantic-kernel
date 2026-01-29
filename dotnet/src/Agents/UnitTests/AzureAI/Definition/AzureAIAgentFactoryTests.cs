@@ -138,7 +138,7 @@ public class AzureAIAgentFactoryTests : IDisposable
           "instructions": "AzureAIAgent Instructions",
           "tools": [],
           "top_p": 1.0,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "tool_resources": {},
           "metadata": {},
           "response_format": "auto"
@@ -182,7 +182,7 @@ public class AzureAIAgentFactoryTests : IDisposable
           "instructions": "You are a helpful assistant.",
           "tools": [],
           "top_p": 1.0,
-          "temperature": 1.0,
+          "temperature": 0.75,
           "tool_resources": {},
           "metadata": {},
           "response_format": "auto"

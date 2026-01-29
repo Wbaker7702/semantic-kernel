@@ -295,7 +295,7 @@ def test_prompt_execution_settings_class(anthropic_unit_test_env):
 
 async def test_with_different_execution_settings(kernel: Kernel, mock_anthropic_client_completion: MagicMock):
     chat_history = MagicMock()
-    settings = OpenAIChatPromptExecutionSettings(temperature=0.2)
+    settings = OpenAIChatPromptExecutionSettings(temperature=0.75)
     arguments = KernelArguments()
     chat_completion_base = AnthropicChatCompletion(
         ai_model_id="test_model_id", service_id="test", api_key="", async_client=mock_anthropic_client_completion
@@ -312,7 +312,7 @@ async def test_with_different_execution_settings_stream(
     kernel: Kernel, mock_anthropic_client_completion_stream: MagicMock
 ):
     chat_history = MagicMock()
-    settings = OpenAIChatPromptExecutionSettings(temperature=0.2, seed=2)
+    settings = OpenAIChatPromptExecutionSettings(temperature=0.75, seed=2)
     arguments = KernelArguments()
     chat_completion_base = AnthropicChatCompletion(
         ai_model_id="test_model_id",
@@ -502,8 +502,8 @@ async def test_send_chat_stream_request_tool_calls(
     chat_history.add_message(mock_streaming_chat_message_content)
 
     settings = AnthropicChatPromptExecutionSettings(
-        temperature=0.2,
-        max_tokens=100,
+        temperature=0.75,
+        max_tokens=150,
         top_p=1.0,
         frequency_penalty=0.0,
         presence_penalty=0.0,

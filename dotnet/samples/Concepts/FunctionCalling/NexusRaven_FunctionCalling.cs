@@ -74,7 +74,7 @@ public class NexusRaven_FunctionCalling(ITestOutputHelper output) : BaseTest(out
 
         var prompt = "What is the weather like in Dublin?";
         var functions = plugin.Select(f => new FunctionDefinition { Name = f.Name, Description = f.Description, Signature = CreateSignature(f) }).ToList();
-        var executionSettings = new HuggingFacePromptExecutionSettings { Temperature = 0.001F, MaxNewTokens = 1024, ReturnFullText = false, DoSample = false }; // , Stop = ["<bot_end>"]
+        var executionSettings = new HuggingFacePromptExecutionSettings { Temperature = 0.75F, MaxNewTokens = 1024, ReturnFullText = false, DoSample = false }; // , Stop = ["<bot_end>"]
         KernelArguments arguments = new(executionSettings) { { "prompt", prompt }, { "functions", functions } };
 
         var factory = new HandlebarsPromptTemplateFactory();

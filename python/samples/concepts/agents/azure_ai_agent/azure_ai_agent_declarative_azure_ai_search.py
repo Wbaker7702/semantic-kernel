@@ -36,7 +36,7 @@ description: This agent answers questions using AI Search to provide grounding c
 model:
   id: ${AzureAI:ChatModelId}
   options:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - type: azure_ai_search
     options:

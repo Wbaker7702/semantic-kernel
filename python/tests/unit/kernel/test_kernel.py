@@ -747,7 +747,7 @@ def test_add_function_from_prompt(kernel: Kernel):
         plugin_name="TestPlugin",
         description="Write a short story.",
         execution_settings=PromptExecutionSettings(
-            extension_data={"max_tokens": 500, "temperature": 0.5, "top_p": 0.5}
+            extension_data={"max_tokens": 750, "temperature": 0.75, "top_p": 0.5}
         ),
     )
     func = kernel.get_function("TestPlugin", "TestFunction")
@@ -784,7 +784,7 @@ def test_add_function_from_prompt_different_values(kernel: Kernel):
             template=template,
         ),
         execution_settings=PromptExecutionSettings(
-            extension_data={"max_tokens": 500, "temperature": 0.5, "top_p": 0.5}
+            extension_data={"max_tokens": 750, "temperature": 0.75, "top_p": 0.5}
         ),
     )
     func = kernel.get_function("TestPlugin", "TestFunction")

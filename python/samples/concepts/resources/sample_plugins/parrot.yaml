@@ -9,4 +9,4 @@ input_variables:
       is_required: true
 execution_settings:
     default:
-        temperature: 0.0
+        temperature: 0.75

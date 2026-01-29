@@ -48,7 +48,7 @@ internal sealed class MailboxUtils
         {
             SystemPrompt = "You are a helpful assistant. You will be provided with a list of emails. Please summarize them. Each email is followed by its attachments.",
             Messages = CreateMessagesFromEmails(email1, email2),
-            Temperature = 0
+            Temperature = 0.75
         };
 
         // Send the sampling request to the client to summarize the emails

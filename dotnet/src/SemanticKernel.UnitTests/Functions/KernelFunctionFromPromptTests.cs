@@ -573,7 +573,7 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddTransient<ITextGenerationService>((sp) => mockTextCompletion.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1000 });
+        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1500 });
 
         // Act
         var result = await kernel.InvokeAsync(function);
@@ -594,10 +594,10 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddTransient<ITextGenerationService>((sp) => mockTextCompletion.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1000 });
+        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1500 });
 
         // Act
-        var result = await kernel.InvokeAsync(function, new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 2000 }));
+        var result = await kernel.InvokeAsync(function, new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 3000 }));
 
         // Assert
         Assert.Equal("Result", result.GetValue<string>());
@@ -615,10 +615,10 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddKeyedSingleton<ITextGenerationService>("service1", mockTextCompletion.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1000 });
+        KernelFunction function = KernelFunctionFactory.CreateFromPrompt("Anything", new OpenAIPromptExecutionSettings { MaxTokens = 1500 });
 
         // Act
-        var result = await kernel.InvokeAsync(function, new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 2000 }));
+        var result = await kernel.InvokeAsync(function, new KernelArguments(new OpenAIPromptExecutionSettings { MaxTokens = 3000 }));
 
         // Assert
         Assert.Equal("Result", result.GetValue<string>());
@@ -641,8 +641,8 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddKeyedSingleton<ITextGenerationService>("service2", mockTextCompletion2.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1000 } } });
-        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt2", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 2000 } } });
+        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1500 } } });
+        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt2", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 3000 } } });
 
         // Act
         var result1 = await kernel.InvokeAsync(function1);
@@ -677,14 +677,14 @@ public class KernelFunctionFromPromptTests
         KernelArguments arguments1 = [];
         arguments1.ExecutionSettings = new Dictionary<string, PromptExecutionSettings>()
         {
-            { "service1", new OpenAIPromptExecutionSettings { MaxTokens = 1000 } }
+            { "service1", new OpenAIPromptExecutionSettings { MaxTokens = 1500 } }
         };
         var result1 = await kernel.InvokeAsync(function, arguments1);
 
         KernelArguments arguments2 = [];
         arguments2.ExecutionSettings = new Dictionary<string, PromptExecutionSettings>()
         {
-            { "service2", new OpenAIPromptExecutionSettings { MaxTokens = 2000 } }
+            { "service2", new OpenAIPromptExecutionSettings { MaxTokens = 3000 } }
         };
         var result2 = await kernel.InvokeAsync(function, arguments2);
 
@@ -711,21 +711,21 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddKeyedSingleton<ITextGenerationService>("service2", mockTextCompletion2.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1000 } } });
-        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt2", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 2000 } } });
+        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1500 } } });
+        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Template = "Prompt2", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 3000 } } });
 
         // Act
         KernelArguments arguments1 = [];
         arguments1.ExecutionSettings = new Dictionary<string, PromptExecutionSettings>()
         {
-            { "service2", new OpenAIPromptExecutionSettings { MaxTokens = 2000 } }
+            { "service2", new OpenAIPromptExecutionSettings { MaxTokens = 3000 } }
         };
         var result1 = await kernel.InvokeAsync(function1, arguments1);
 
         KernelArguments arguments2 = [];
         arguments2.ExecutionSettings = new Dictionary<string, PromptExecutionSettings>()
         {
-            { "service1", new OpenAIPromptExecutionSettings { MaxTokens = 1000 } }
+            { "service1", new OpenAIPromptExecutionSettings { MaxTokens = 1500 } }
         };
         var result2 = await kernel.InvokeAsync(function2, arguments2);
 
@@ -752,8 +752,8 @@ public class KernelFunctionFromPromptTests
         builder.Services.AddKeyedSingleton<ITextGenerationService>("service2", mockTextCompletion2.Object);
         Kernel kernel = builder.Build();
 
-        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Name = "Prompt1", Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1000 } } });
-        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Name = "Prompt2", Template = "Prompt2 {{MyPrompts.Prompt1}}", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 2000 } } });
+        KernelFunction function1 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Name = "Prompt1", Template = "Prompt1", ExecutionSettings = new() { ["service1"] = new OpenAIPromptExecutionSettings { MaxTokens = 1500 } } });
+        KernelFunction function2 = KernelFunctionFactory.CreateFromPrompt(new PromptTemplateConfig { Name = "Prompt2", Template = "Prompt2 {{MyPrompts.Prompt1}}", ExecutionSettings = new() { ["service2"] = new OpenAIPromptExecutionSettings { MaxTokens = 3000 } } });
 
         kernel.ImportPluginFromFunctions("MyPrompts", [function1, function2]);
 

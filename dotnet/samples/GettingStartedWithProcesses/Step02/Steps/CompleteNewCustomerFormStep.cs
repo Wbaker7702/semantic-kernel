@@ -95,8 +95,8 @@ public class CompleteNewCustomerFormStep : KernelProcessStep<NewCustomerFormStat
         OpenAIPromptExecutionSettings settings = new()
         {
             ToolCallBehavior = ToolCallBehavior.AutoInvokeKernelFunctions,
-            Temperature = 0.7,
-            MaxTokens = 2048
+            Temperature = 0.75,
+            MaxTokens = 4608
         };
 
         ChatHistory chatHistory = new();

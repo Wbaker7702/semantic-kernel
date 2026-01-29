@@ -149,7 +149,7 @@ public sealed class OllamaChatClientTests : IDisposable
 
         var chatOptions = new ChatOptions
         {
-            Temperature = 0.5f,
+            Temperature = 0.75f,
             TopP = 0.9f,
             MaxOutputTokens = 100,
             StopSequences = ["stop me"]

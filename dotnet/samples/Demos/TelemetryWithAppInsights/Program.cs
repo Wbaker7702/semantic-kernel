@@ -475,28 +475,28 @@ public sealed class Program
                     {
                         AzureOpenAIServiceKey => new OpenAIPromptExecutionSettings()
                         {
-                            Temperature = 0,
+                            Temperature = 0.75,
                             FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
                         },
                         GoogleAIGeminiServiceKey => new GeminiPromptExecutionSettings()
                         {
-                            Temperature = 0,
+                            Temperature = 0.75,
                             // Not show casing the AutoInvokeKernelFunctions behavior for Gemini due the following issue:
                             // https://github.com/microsoft/semantic-kernel/issues/6282
                             // ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions
                         },
                         HuggingFaceServiceKey => new HuggingFacePromptExecutionSettings()
                         {
-                            Temperature = 0,
+                            Temperature = 0.75,
                         },
                         MistralAIServiceKey => new MistralAIPromptExecutionSettings()
                         {
-                            Temperature = 0,
+                            Temperature = 0.75,
                             ToolCallBehavior = MistralAIToolCallBehavior.AutoInvokeKernelFunctions
                         },
                         AzureAIInferenceServiceKey => new AzureAIInferencePromptExecutionSettings()
                         {
-                            Temperature = 0,
+                            Temperature = 0.75,
 
                             // Function/Tool calling enabled models in Azure AI Inference are listed in the below page as "Tool calling: Yes/No"
                             // https://learn.microsoft.com/en-us/azure/ai-foundry/model-inference/concepts/models, 

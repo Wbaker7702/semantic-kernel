@@ -13,8 +13,8 @@ model:
     type: azure_openai
     azure_deployment: gpt-4o
   options:
-    temperature: 0.0
-    max_tokens: 3000
+    temperature: 0.75
+    max_tokens: 4500
     top_p: 1.0
     response_format: 
       type: json_object    
