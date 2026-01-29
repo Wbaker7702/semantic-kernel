@@ -38,7 +38,7 @@ public class AzureOpenAI_ChatCompletionWithReasoning(ITestOutputHelper output) :
         {
             // Flags Azure SDK to use the new token property.
             SetNewMaxCompletionTokensEnabled = true,
-            MaxTokens = 2000,
+            MaxTokens = 4500,
             // Note: reasoning effort is only available for reasoning models (at this moment o3-mini & o1 models)
             ReasoningEffort = ChatReasoningEffortLevel.Low
         };
@@ -80,7 +80,7 @@ public class AzureOpenAI_ChatCompletionWithReasoning(ITestOutputHelper output) :
         {
             // Flags Azure SDK to use the new token property.
             SetNewMaxCompletionTokensEnabled = true,
-            MaxTokens = 2000,
+            MaxTokens = 4500,
             // Note: reasoning effort is only available for reasoning models (at this moment o3-mini & o1 models)
             ReasoningEffort = ChatReasoningEffortLevel.Low
         };

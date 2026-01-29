@@ -40,7 +40,7 @@ public class AgentDefinitionYamlTests
             model:
                 id: ${AzureAI:ChatModelId}
                 options:
-                    temperature: 0.4
+                    temperature: 0.75
                     function_choice_behavior:
                         type: auto
                 connection:

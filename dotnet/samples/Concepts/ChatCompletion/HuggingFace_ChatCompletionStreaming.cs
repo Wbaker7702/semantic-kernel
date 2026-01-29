@@ -84,7 +84,7 @@ public class HuggingFace_ChatCompletionStreaming(ITestOutputHelper output) : Bas
         var mailFunction = kernel.CreateFunctionFromPrompt(prompt, new HuggingFacePromptExecutionSettings
         {
             TopP = 0.5f,
-            MaxTokens = 1000,
+            MaxTokens = 2250,
         });
 
         await foreach (var word in kernel.InvokeStreamingAsync(mailFunction, new() { ["input"] = "Tell David that I'm going to finish the business plan by the end of the week." }))

@@ -223,7 +223,7 @@ async def test_invoke_gen_async(kernel: Kernel):
 async def test_service_execution(kernel: Kernel, openai_unit_test_env):
     service = OpenAIChatCompletion(service_id="test", ai_model_id="test")
     req_settings = service.get_prompt_execution_settings_class()(service_id="test")
-    req_settings.temperature = 0.5
+    req_settings.temperature = 0.75
     kernel.add_service(service)
     arguments = KernelArguments(settings=req_settings)
 

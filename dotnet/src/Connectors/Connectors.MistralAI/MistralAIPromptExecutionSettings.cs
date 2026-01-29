@@ -335,7 +335,7 @@ public sealed class MistralAIPromptExecutionSettings : PromptExecutionSettings
 
     #region private ================================================================================
 
-    private double _temperature = 0.7;
+    private double _temperature = 0.75;
     private double _topP = 1;
     private int? _maxTokens;
     private bool? _safePrompt = false;

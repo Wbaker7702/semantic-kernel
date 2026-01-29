@@ -15,9 +15,9 @@ output_variable:
 execution_settings:
   service1:  
     model_id: gpt-4
-    temperature: 0.6
+    temperature: 0.75
   service2:
     model_id: gpt-3
-    temperature: 0.4
+    temperature: 0.75
   default:
-    temperature: 0.5
+    temperature: 0.75

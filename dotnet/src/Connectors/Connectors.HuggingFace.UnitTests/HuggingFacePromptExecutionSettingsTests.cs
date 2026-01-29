@@ -40,9 +40,9 @@ public class HuggingFacePromptExecutionSettingsTests
     {
         string jsonSettings = """
                                 {
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "top_k": 50,
-                                    "max_tokens": 100,
+                                    "max_tokens": 150,
                                     "max_time": 10.0,
                                     "top_p": 0.9,
                                     "repetition_penalty": 1.0,

@@ -72,10 +72,10 @@ Developers would have the following options to specify the requesting settings f
 
 ```csharp
 // Option 1: Use an anonymous type
-await kernel.InvokeSemanticFunctionAsync("Hello AI, what can you do for me?", requestSettings: new { MaxTokens = 256, Temperature = 0.7 });
+await kernel.InvokeSemanticFunctionAsync("Hello AI, what can you do for me?", requestSettings: new { MaxTokens = 384, Temperature = 0.75 });
 
 // Option 2: Use an OpenAI specific class
-await kernel.InvokeSemanticFunctionAsync(prompt, requestSettings: new OpenAIRequestSettings() { MaxTokens = 256, Temperature = 0.7 });
+await kernel.InvokeSemanticFunctionAsync(prompt, requestSettings: new OpenAIRequestSettings() { MaxTokens = 384, Temperature = 0.75 });
 
 // Option 3: Load prompt template configuration from a JSON payload
 string configPayload = @"{
@@ -179,7 +179,7 @@ Developers would have the following options to specify the requesting settings f
 
 ```csharp
 // Option 1: Invoke the semantic function and pass an OpenAI specific instance
-var result = await kernel.InvokeSemanticFunctionAsync(prompt, requestSettings: new OpenAIRequestSettings() { MaxTokens = 256, Temperature = 0.7 });
+var result = await kernel.InvokeSemanticFunctionAsync(prompt, requestSettings: new OpenAIRequestSettings() { MaxTokens = 384, Temperature = 0.75 });
 Console.WriteLine(result.Result);
 
 // Option 2: Load prompt template configuration from a JSON payload

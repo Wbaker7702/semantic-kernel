@@ -56,6 +56,6 @@ internal sealed class KernelFunctionFromMethodTests
 
     private static Weather GetWeather(Location location)
     {
-        return location.City == "Boston" ? new Weather { Temperature = 61, Condition = "rainy" } : throw new NotImplementedException();
+        return location.City == "Boston" ? new Weather { Temperature = 0.75, Condition = "rainy" } : throw new NotImplementedException();
     }
 }

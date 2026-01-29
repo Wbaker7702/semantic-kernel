@@ -374,7 +374,7 @@ Remember that when updating the artifact, the field will be the original field n
         """Calls the LLM to fix an error in the artifact using Semantic Kernel kernel."""
 
         req_settings = self.kernel.get_prompt_execution_settings_from_service_id(self.service_id)
-        req_settings.max_tokens = 2000
+        req_settings.max_tokens = 4500
 
         self.kernel.add_function(plugin_name=self.id, function=self.update_artifact_field)
         self.kernel.add_function(plugin_name=self.id, function=self.resume_conversation)

@@ -104,7 +104,7 @@ public class ResponseCreationOptionsFactoryTests
             MaxOutputTokenCount = 1000,
             ParallelToolCallsEnabled = true,
             ToolChoice = ResponseToolChoice.CreateAutoChoice(),
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             TopP = 0.9f,
             PreviousResponseId = "previous-response-id",
         };

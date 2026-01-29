@@ -331,7 +331,7 @@ Please pick a function from the above options that best answers the user query a
     template_format="handlebars",
     prompt_execution_settings=NexusRavenPromptExecutionSettings(
         service_id="nexus",
-        temperature=0.001,
+        temperature=0.75,
         max_new_tokens=500,
         do_sample=False,
         stop_sequences=["\nReflection:", "\nThought:"],
@@ -344,8 +344,8 @@ kernel.add_function(
     template_format="handlebars",
     prompt_execution_settings=OpenAIChatPromptExecutionSettings(
         service_id="openai",
-        temperature=0.0,
-        max_tokens=1000,
+        temperature=0.75,
+        max_tokens=2250,
     ),
 )
 kernel.add_plugin(MathPlugin(), "math")

@@ -134,8 +134,8 @@ public class MultipleModelTests
                 ],
               "execution_settings": {
                 "service2": {
-                  "max_tokens": 100,
-                  "temperature": 0.2,
+                  "max_tokens": 150,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,
@@ -144,8 +144,8 @@ public class MultipleModelTests
                   ]
                 },
                 "service3": {
-                  "max_tokens": 100,
-                  "temperature": 0.4,
+                  "max_tokens": 150,
+                  "temperature": 0.75,
                   "top_p": 0.0,
                   "presence_penalty": 0.0,
                   "frequency_penalty": 0.0,

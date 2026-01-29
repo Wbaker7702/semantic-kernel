@@ -33,12 +33,12 @@ public class DescribeAllPluginsAndFunctions(ITestOutputHelper output) : BaseTest
         kernel.ImportPluginFromPromptDirectory(Path.Combine(folder, "SummarizePlugin"));
 
         // Define a prompt function inline, without naming
-        var sFun1 = kernel.CreateFunctionFromPrompt("tell a joke about {{$input}}", new OpenAIPromptExecutionSettings() { MaxTokens = 150 });
+        var sFun1 = kernel.CreateFunctionFromPrompt("tell a joke about {{$input}}", new OpenAIPromptExecutionSettings() { MaxTokens = 337 });
 
         // Define a prompt function inline, with plugin name
         var sFun2 = kernel.CreateFunctionFromPrompt(
             "write a novel about {{$input}} in {{$language}} language",
-            new OpenAIPromptExecutionSettings() { MaxTokens = 150 },
+            new OpenAIPromptExecutionSettings() { MaxTokens = 337 },
             functionName: "Novel",
             description: "Write a bedtime story");
 

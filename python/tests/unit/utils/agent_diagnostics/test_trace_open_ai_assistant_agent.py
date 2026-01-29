@@ -28,7 +28,7 @@ async def test_open_ai_assistant_agent_get_response(
     definition.instructions = "agentInstructions"
     definition.tools = []
     definition.model = "agentModel"
-    definition.temperature = 1.0
+    definition.temperature = 0.75
     definition.top_p = 1.0
     definition.metadata = {}
     openai_assistant_agent = OpenAIAssistantAgent(client=client, definition=definition)
@@ -66,7 +66,7 @@ async def test_open_ai_assistant_agent_invoke(
     definition.instructions = "agentInstructions"
     definition.tools = []
     definition.model = "agentModel"
-    definition.temperature = 1.0
+    definition.temperature = 0.75
     definition.top_p = 1.0
     definition.metadata = {}
     openai_assistant_agent = OpenAIAssistantAgent(client=client, definition=definition)
@@ -105,7 +105,7 @@ async def test_open_ai_assistant_agent_invoke_stream(
     definition.instructions = "agentInstructions"
     definition.tools = []
     definition.model = "agentModel"
-    definition.temperature = 1.0
+    definition.temperature = 0.75
     definition.top_p = 1.0
     definition.metadata = {}
     openai_assistant_agent = OpenAIAssistantAgent(client=client, definition=definition)

@@ -207,7 +207,7 @@ Given the hierarchical nature of the choice behavior model classes, polymorphic 
     ...
     "execution_settings": {
         "default": {
-            "temperature": 0.4,
+            "temperature": 0.75,
             "function_choice_behavior": {
                 "type": "auto", //possible values - auto, required, none
                 "functions": [
@@ -225,7 +225,7 @@ Given the hierarchical nature of the choice behavior model classes, polymorphic 
 ```yaml
 execution_settings:
   default:
-    temperature: 0.4
+    temperature: 0.75
     function_choice_behavior:
       type: auto
       functions:
@@ -265,21 +265,21 @@ Furthermore, there may be scenarios where two out of three services share the sa
 },
 "execution_settings": {
    "default": {
-     "temperature": 0,
+     "temperature": 0.75,
      "function_choice_behavior":{
         ...
      }
    },
    "gpt-3.5-turbo": {
      "model_id": "gpt-3.5-turbo-0613",
-     "temperature": 0.1,
+     "temperature": 0.75,
      "function_choice_behavior":{
         ...
      }
    },
    "gpt-4": {
      "model_id": "gpt-4-1106-preview",
-     "temperature": 0.3,
+     "temperature": 0.75,
      "function_choice_behavior":{
         ...
      }

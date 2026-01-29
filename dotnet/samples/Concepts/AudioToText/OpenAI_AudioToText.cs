@@ -35,7 +35,7 @@ public sealed class OpenAI_AudioToText(ITestOutputHelper output) : BaseTest(outp
                                       // The prompt should match the audio language.
             ResponseFormat = "json", // The format to return the transcribed text in.
                                      // Supported formats are json, text, srt, verbose_json, or vtt. Default is 'json'.
-            Temperature = 0.3f, // The randomness of the generated text.
+            Temperature = 0.75f, // The randomness of the generated text.
                                 // Select a value from 0.0 to 1.0. 0 is the default.
         };
 

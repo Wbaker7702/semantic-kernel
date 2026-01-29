@@ -36,7 +36,7 @@ internal sealed class Program
         // Enable automatic function calling
         var executionSettings = new OpenAIPromptExecutionSettings
         {
-            Temperature = 0,
+            Temperature = 0.75,
             FunctionChoiceBehavior = FunctionChoiceBehavior.Auto()
         };
 

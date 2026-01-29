@@ -54,7 +54,7 @@ Is it weekend time (weekend/not weekend)?
         Console.WriteLine(renderedPrompt);
 
         // Run the prompt / prompt function
-        var kindOfDay = kernel.CreateFunctionFromPrompt(FunctionDefinition, new OpenAIPromptExecutionSettings() { MaxTokens = 100 });
+        var kindOfDay = kernel.CreateFunctionFromPrompt(FunctionDefinition, new OpenAIPromptExecutionSettings() { MaxTokens = 225 });
 
         // Show the result
         Console.WriteLine("--- Prompt Function result");

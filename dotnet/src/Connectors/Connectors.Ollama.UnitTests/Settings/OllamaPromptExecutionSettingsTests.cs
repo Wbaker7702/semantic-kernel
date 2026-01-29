@@ -50,7 +50,7 @@ public class OllamaPromptExecutionSettingsTests
         string jsonSettings = """
                                 {
                                     "stop": ["stop me"],
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "top_p": 0.9,
                                     "top_k": 100,
                                     "num_predict": 50
@@ -91,7 +91,7 @@ public class OllamaPromptExecutionSettingsTests
         // Arrange
         string configPayload = """
         {
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.9,
             "top_k": 100,
             "num_predict": 50,
@@ -122,7 +122,7 @@ public class OllamaPromptExecutionSettingsTests
         // Arrange
         var testSettings = new OllamaPromptExecutionSettings
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             TopP = 0.85f,
             TopK = 50,
             NumPredict = 100,
@@ -152,7 +152,7 @@ public class OllamaPromptExecutionSettingsTests
         // Arrange
         var testSettings = new OllamaPromptExecutionSettings
         {
-            Temperature = 0.7f,
+            Temperature = 0.75f,
             TopP = 0.9f,
             ServiceId = "test-service"
         };
@@ -176,7 +176,7 @@ public class OllamaPromptExecutionSettingsTests
         {
             ServiceId = "my-ollama-service",
             ModelId = "llama2",
-            Temperature = 0.8f
+            Temperature = 0.75f
         };
 
         // Act
@@ -194,7 +194,7 @@ public class OllamaPromptExecutionSettingsTests
         // Arrange
         var executionSettings = new OllamaPromptExecutionSettings
         {
-            Temperature = 0.5f,
+            Temperature = 0.75f,
             TopP = 0.9f,
             TopK = 100,
             NumPredict = 50,
@@ -206,7 +206,7 @@ public class OllamaPromptExecutionSettingsTests
 
         // Assert
         Assert.True(executionSettings.IsFrozen);
-        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 1);
+        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 0.75);
         Assert.Throws<InvalidOperationException>(() => executionSettings.TopP = 1);
         Assert.Throws<InvalidOperationException>(() => executionSettings.TopK = 1);
         Assert.Throws<InvalidOperationException>(() => executionSettings.NumPredict = 1);

@@ -16,7 +16,7 @@ def test_default_onnx_chat_prompt_execution_settings():
 
 def test_custom_onnx_chat_prompt_execution_settings():
     settings = OnnxGenAIPromptExecutionSettings(
-        temperature=0.5,
+        temperature=0.75,
         top_p=0.5,
         max_length=128,
     )
@@ -34,8 +34,8 @@ def test_onnx_chat_prompt_execution_settings_from_default_completion_config():
 
 
 def test_onnx_chat_prompt_execution_settings_from_onnx_prompt_execution_settings():
-    chat_settings = OnnxGenAIPromptExecutionSettings(service_id="test_service", temperature=1.0)
-    new_settings = OnnxGenAIPromptExecutionSettings(service_id="test_2", temperature=0.0)
+    chat_settings = OnnxGenAIPromptExecutionSettings(service_id="test_service", temperature=0.75)
+    new_settings = OnnxGenAIPromptExecutionSettings(service_id="test_2", temperature=0.75)
     chat_settings.update_from_prompt_execution_settings(new_settings)
     assert chat_settings.service_id == "test_2"
     assert chat_settings.temperature == 0.0
@@ -45,7 +45,7 @@ def test_onnx_chat_prompt_execution_settings_from_custom_completion_config():
     settings = PromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "max_length": 128,
         },
@@ -60,7 +60,7 @@ def test_create_options():
     settings = OnnxGenAIPromptExecutionSettings(
         service_id="test_service",
         extension_data={
-            "temperature": 0.5,
+            "temperature": 0.75,
             "top_p": 0.5,
             "max_length": 128,
         },
@@ -77,7 +77,7 @@ def test_create_options_with_wrong_parameter():
             service_id="test_service",
             function_choice_behavior="auto",
             extension_data={
-                "temperature": 10.0,
+                "temperature": 0.75,
                 "top_p": 0.5,
                 "max_length": 128,
             },

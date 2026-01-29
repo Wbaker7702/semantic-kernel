@@ -15,7 +15,7 @@ public class ConversationSummaryPlugin
     /// <summary>
     /// The max tokens to process in a single prompt function call.
     /// </summary>
-    private const int MaxTokens = 1024;
+    private const int MaxTokens = 1536;
 
     private readonly KernelFunction _summarizeConversationFunction;
     private readonly KernelFunction _conversationActionItemsFunction;

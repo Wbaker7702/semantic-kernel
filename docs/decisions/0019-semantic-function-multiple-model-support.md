@@ -42,7 +42,7 @@ Support use cases 1 & 2 listed in this ADR and create separate ADR to add suppor
 _As a developer using the Semantic Kernel I can configure multiple request settings for a semantic function and associate each one with a service id so that the correct request settings are used when different services are used to execute my semantic function._
 
 The semantic function template configuration allows multiple model request settings to be configured. In this case the developer configures different settings based on the service id that is used to execute the semantic function.
-In the example below the semantic function is executed with "AzureText" using `max_tokens=60` because "AzureText" is the first service id in the list of models configured for the prompt.
+In the example below the semantic function is executed with "AzureText" using `max_tokens=90` because "AzureText" is the first service id in the list of models configured for the prompt.
 
 ```csharp
 // Configure a Kernel with multiple LLM's
@@ -61,16 +61,16 @@ IKernel kernel = new KernelBuilder()
 // Configure semantic function with multiple LLM request settings
 var modelSettings = new List<AIRequestSettings>
 {
-    new OpenAIRequestSettings() { ServiceId = "AzureText", MaxTokens = 60 },
-    new OpenAIRequestSettings() { ServiceId = "AzureChat", MaxTokens = 120 },
-    new OpenAIRequestSettings() { ServiceId = "OpenAIText", MaxTokens = 180 },
-    new OpenAIRequestSettings() { ServiceId = "OpenAIChat", MaxTokens = 240 }
+    new OpenAIRequestSettings() { ServiceId = "AzureText", MaxTokens = 90 },
+    new OpenAIRequestSettings() { ServiceId = "AzureChat", MaxTokens = 180 },
+    new OpenAIRequestSettings() { ServiceId = "OpenAIText", MaxTokens = 270 },
+    new OpenAIRequestSettings() { ServiceId = "OpenAIChat", MaxTokens = 360 }
 };
 var prompt = "Hello AI, what can you do for me?";
 var promptTemplateConfig = new PromptTemplateConfig() { ModelSettings = modelSettings };
 var func = kernel.CreateSemanticFunction(prompt, config: promptTemplateConfig, "HelloAI");
 
-// Semantic function is executed with AzureText using max_tokens=60
+// Semantic function is executed with AzureText using max_tokens=90
 result = await kernel.RunAsync(func);
 ```
 
@@ -119,10 +119,10 @@ IKernel kernel = new KernelBuilder()
 // Configure semantic function with multiple LLM request settings
 var modelSettings = new List<AIRequestSettings>
 {
-    new OpenAIRequestSettings() { ServiceId = "AzureText", MaxTokens = 60 },
-    new OpenAIRequestSettings() { ServiceId = "AzureChat", MaxTokens = 120 },
-    new OpenAIRequestSettings() { ServiceId = "OpenAIText", MaxTokens = 180 },
-    new OpenAIRequestSettings() { ServiceId = "OpenAIChat", MaxTokens = 240 }
+    new OpenAIRequestSettings() { ServiceId = "AzureText", MaxTokens = 90 },
+    new OpenAIRequestSettings() { ServiceId = "AzureChat", MaxTokens = 180 },
+    new OpenAIRequestSettings() { ServiceId = "OpenAIText", MaxTokens = 270 },
+    new OpenAIRequestSettings() { ServiceId = "OpenAIChat", MaxTokens = 360 }
 };
 var prompt = "Hello AI, what can you do for me?";
 var promptTemplateConfig = new PromptTemplateConfig() { ModelSettings = modelSettings };
@@ -158,17 +158,17 @@ IKernel kernel = Kernel.Builder
 // Invoke the semantic function and service and request settings to use
 result = await kernel.InvokeSemanticFunctionAsync(prompt,
     requestSettings: new OpenAIRequestSettings()
-        { ServiceId = "AzureText", MaxTokens = 60 });
+        { ServiceId = "AzureText", MaxTokens = 90 });
 
 result = await kernel.InvokeSemanticFunctionAsync(prompt,
     requestSettings: new OpenAIRequestSettings()
-        { ServiceId = "AzureChat", MaxTokens = 120 });
+        { ServiceId = "AzureChat", MaxTokens = 180 });
 
 result = await kernel.InvokeSemanticFunctionAsync(prompt,
     requestSettings: new OpenAIRequestSettings()
-        { ServiceId = "OpenAIText", MaxTokens = 180 });
+        { ServiceId = "OpenAIText", MaxTokens = 270 });
 
 result = await kernel.InvokeSemanticFunctionAsync(prompt,
     requestSettings: new OpenAIRequestSettings()
-        { ServiceId = "OpenAIChat", MaxTokens = 240 });
+        { ServiceId = "OpenAIChat", MaxTokens = 360 });
 ```

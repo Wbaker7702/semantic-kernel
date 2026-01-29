@@ -25,8 +25,8 @@ service_id = "chat-gpt"
 kernel.add_service(OpenAIChatCompletion(service_id=service_id))
 
 settings = kernel.get_prompt_execution_settings_from_service_id(service_id)
-settings.max_tokens = 2000
-settings.temperature = 0.7
+settings.max_tokens = 4500
+settings.temperature = 0.75
 settings.top_p = 0.8
 
 chat_function = kernel.add_function(

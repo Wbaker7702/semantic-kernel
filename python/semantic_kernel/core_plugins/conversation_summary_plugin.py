@@ -18,7 +18,7 @@ class ConversationSummaryPlugin:
     """Semantic plugin that enables conversations summarization."""
 
     # The max tokens to process in a single semantic function call.
-    _max_tokens = 1024
+    _max_tokens = 1536
 
     _summarize_conversation_prompt_template = (
         "BEGIN CONTENT TO SUMMARIZE:\n{{"

@@ -31,7 +31,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.EnableKernelFunctions,
         };
 
@@ -59,7 +59,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.EnableKernelFunctions,
         };
 
@@ -89,7 +89,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -116,7 +116,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -145,7 +145,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers first and next return age of Anna customer?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -170,7 +170,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Hello, could you show me list of customers first and next return age of Anna customer?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -199,7 +199,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
             "Get list of customers and next get customers ages and at the end calculate the sum of ages of all customers.");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -226,7 +226,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
             "Get list of customers and next get customers ages and at the end calculate the sum of ages of all customers.");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -276,7 +276,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("How many tasks I have to do today? Show me count of tasks for today and date.");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -302,7 +302,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("How many tasks I have to do today? Show me count of tasks for today and date.");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -331,7 +331,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("Whats the time and weather in Seattle?");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -369,7 +369,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("When was last friday? Show the date in format DD.MM.YYYY for example: 15.07.2019");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 
@@ -397,7 +397,7 @@ public sealed class GeminiFunctionCallingTests(ITestOutputHelper output) : Tests
         chatHistory.AddUserMessage("When was last friday? Show the date in format DD.MM.YYYY for example: 15.07.2019");
         var executionSettings = new GeminiPromptExecutionSettings()
         {
-            MaxTokens = 2000,
+            MaxTokens = 3000,
             ToolCallBehavior = GeminiToolCallBehavior.AutoInvokeKernelFunctions,
         };
 

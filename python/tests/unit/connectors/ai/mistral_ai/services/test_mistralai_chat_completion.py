@@ -351,7 +351,7 @@ def test_prompt_execution_settings_class(mistralai_unit_test_env):
 
 async def test_with_different_execution_settings(kernel: Kernel, mock_mistral_ai_client_completion: MagicMock):
     chat_history = MagicMock()
-    settings = OpenAIChatPromptExecutionSettings(temperature=0.2, seed=2)
+    settings = OpenAIChatPromptExecutionSettings(temperature=0.75, seed=2)
     arguments = KernelArguments()
     chat_completion_base = MistralAIChatCompletion(
         ai_model_id="test_model_id", service_id="test", api_key="", async_client=mock_mistral_ai_client_completion
@@ -368,7 +368,7 @@ async def test_with_different_execution_settings_stream(
     kernel: Kernel, mock_mistral_ai_client_completion_stream: MagicMock
 ):
     chat_history = MagicMock()
-    settings = OpenAIChatPromptExecutionSettings(temperature=0.2, seed=2)
+    settings = OpenAIChatPromptExecutionSettings(temperature=0.75, seed=2)
     arguments = KernelArguments()
     chat_completion_base = MistralAIChatCompletion(
         ai_model_id="test_model_id",

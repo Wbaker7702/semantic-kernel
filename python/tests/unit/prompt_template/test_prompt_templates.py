@@ -107,7 +107,7 @@ def test_restore():
     description = "This is a test template."
     template = "Hello, {{$name}}!"
     input_variables = [InputVariable(name="name", description="Name of the person to greet", type="string")]
-    execution_settings = PromptExecutionSettings(timeout=30, max_tokens=100)
+    execution_settings = PromptExecutionSettings(timeout=30, max_tokens=150)
 
     restored_template = PromptTemplateConfig.restore(
         name=name,
@@ -156,7 +156,7 @@ def test_restore_handlebars():
     template = "Hello, {{name}}!"
     template_format = "handlebars"
     input_variables = [InputVariable(name="name", description="Name of the person to greet", type="string")]
-    execution_settings = PromptExecutionSettings(timeout=30, max_tokens=100)
+    execution_settings = PromptExecutionSettings(timeout=30, max_tokens=150)
 
     restored_template = PromptTemplateConfig.restore(
         name=name,

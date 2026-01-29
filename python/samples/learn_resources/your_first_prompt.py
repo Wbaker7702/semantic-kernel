@@ -23,7 +23,7 @@ async def main(delay: int = 0):
         "Tasks and Documents, make sure to include that in your request."
     )
     request = input("Your request: ")
-    arguments = KernelArguments(request=request, settings=PromptExecutionSettings(max_tokens=100))
+    arguments = KernelArguments(request=request, settings=PromptExecutionSettings(max_tokens=225))
     # <InitialPrompt> 0.0 Initial prompt
     prompt = "What is the intent of this request? {{$request}}"
     # </InitialPrompt>

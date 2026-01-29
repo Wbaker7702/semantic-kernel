@@ -59,14 +59,14 @@ public class OnnxRuntimeGenAIPromptExecutionSettingsTests
                                 {
                                     "top_k": 2,
                                     "top_p": 0.9,
-                                    "temperature": 0.5,
+                                    "temperature": 0.75,
                                     "repetition_penalty": 0.1,
                                     "past_present_share_buffer": true,
                                     "num_return_sequences": 200,
                                     "num_beams": 20,
                                     "no_repeat_ngram_size": 15,
                                     "min_tokens": 10,
-                                    "max_tokens": 100,
+                                    "max_tokens": 150,
                                     "length_penalty": 0.2,
                                     "diversity_penalty": 0.3,
                                     "early_stopping": false,
@@ -99,7 +99,7 @@ public class OnnxRuntimeGenAIPromptExecutionSettingsTests
     public void ItShouldCreateOnnxPromptExecutionSettingsFromCustomPromptExecutionSettings()
     {
         // Arrange
-        var customExecutionSettings = new CustomPromptExecutionSettings() { ServiceId = "service-id", Temperature = 36.6f };
+        var customExecutionSettings = new CustomPromptExecutionSettings() { ServiceId = "service-id", Temperature = 0.75f };
 
         // Act
         var onnxExecutionSettings = OnnxRuntimeGenAIPromptExecutionSettings.FromExecutionSettings(customExecutionSettings);
@@ -118,7 +118,7 @@ public class OnnxRuntimeGenAIPromptExecutionSettingsTests
             TypeInfoResolver = CustomPromptExecutionSettingsJsonSerializerContext.Default
         };
 
-        var customExecutionSettings = new CustomPromptExecutionSettings() { ServiceId = "service-id", Temperature = 36.6f };
+        var customExecutionSettings = new CustomPromptExecutionSettings() { ServiceId = "service-id", Temperature = 0.75f };
 
         // Act
         var onnxExecutionSettings = OnnxRuntimeGenAIPromptExecutionSettings.FromExecutionSettings(customExecutionSettings, jsos);

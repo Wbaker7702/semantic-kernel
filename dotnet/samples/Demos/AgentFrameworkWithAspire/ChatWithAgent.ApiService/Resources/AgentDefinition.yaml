@@ -6,4 +6,4 @@ description: |
   It utilizes advanced algorithms and methodologies to provide accurate insights and recommendations.
 execution_settings:
   default:
-    temperature: 0
+    temperature: 0.75

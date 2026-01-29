@@ -246,7 +246,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [
@@ -343,7 +343,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [
@@ -413,7 +413,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [
@@ -491,7 +491,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [
@@ -598,7 +598,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [
@@ -687,7 +687,7 @@ pytestmark = pytest.mark.parametrize(
                 "function_choice_behavior": FunctionChoiceBehavior.Auto(
                     auto_invoke=True, filters={"excluded_plugins": ["task_plugin"]}
                 ),
-                "max_tokens": 256,
+                "max_tokens": 384,
             },
             [
                 [

@@ -115,7 +115,7 @@ public class Step08_AzureAIAgent_Declarative : BaseAzureAgentTest
             model:
               id: ${AzureAI:ChatModelId}
               options:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - id: GetSpecials
                 type: function
@@ -152,7 +152,7 @@ public class Step08_AzureAIAgent_Declarative : BaseAzureAgentTest
             model:
               id: ${AzureAI:ChatModelId}
               options:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - type: bing_grounding
                 options:
@@ -181,7 +181,7 @@ public class Step08_AzureAIAgent_Declarative : BaseAzureAgentTest
             model:
               id: ${AzureAI:ChatModelId}
               optisons:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - type: file_search
                 description: Grounding with available files.
@@ -208,7 +208,7 @@ public class Step08_AzureAIAgent_Declarative : BaseAzureAgentTest
             model:
               id: ${AzureAI:ChatModelId}
               options:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - type: openapi
                 id: GetCurrentWeather
@@ -297,7 +297,7 @@ public class Step08_AzureAIAgent_Declarative : BaseAzureAgentTest
             model:
               id: ${AzureAI:ChatModelId}
               options:
-                temperature: 0.4
+                temperature: 0.75
             tools:
               - type: openapi
                 id: GetCurrentWeather

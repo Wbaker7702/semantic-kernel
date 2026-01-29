@@ -73,8 +73,8 @@ chat_function = kernel.add_function(
 )
 settings = OpenAIChatPromptExecutionSettings(
     service_id="chat",
-    max_tokens=2000,
-    temperature=0.7,
+    max_tokens=4500,
+    temperature=0.75,
     top_p=0.8,
     function_choice_behavior=FunctionChoiceBehavior.Auto(),
 )

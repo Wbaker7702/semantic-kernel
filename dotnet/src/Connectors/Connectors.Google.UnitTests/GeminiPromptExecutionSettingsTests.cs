@@ -38,14 +38,14 @@ public sealed class GeminiPromptExecutionSettingsTests
         // Arrange
         GeminiPromptExecutionSettings actualSettings = new()
         {
-            Temperature = 0.7,
+            Temperature = 0.75,
             TopP = 0.7,
             TopK = 20,
             CandidateCount = 3,
             AudioTimestamp = true,
             ResponseMimeType = "application/json",
             StopSequences = ["foo", "bar"],
-            MaxTokens = 128,
+            MaxTokens = 192,
             SafetySettings =
             [
                 new(GeminiSafetyCategory.Harassment, GeminiSafetyThreshold.BlockOnlyHigh)
@@ -97,12 +97,12 @@ public sealed class GeminiPromptExecutionSettingsTests
         var threshold = GeminiSafetyThreshold.BlockOnlyHigh;
         string json = $$"""
                         {
-                          "temperature": 0.7,
+                          "temperature": 0.75,
                           "top_p": 0.7,
                           "top_k": 25,
                           "candidate_count": 2,
                           "stop_sequences": [ "foo", "bar" ],
-                          "max_tokens": 128,
+                          "max_tokens": 192,
                           "audio_timestamp": true,
                           "safety_settings": [
                             {
@@ -145,13 +145,13 @@ public sealed class GeminiPromptExecutionSettingsTests
         string json = $$"""
                         {
                           "model_id": "gemini-pro",
-                          "temperature": 0.7,
+                          "temperature": 0.75,
                           "top_p": 0.7,
                           "top_k": 25,
                           "candidate_count": 2,
                           "audio_timestamp": true,
                           "stop_sequences": [ "foo", "bar" ],
-                          "max_tokens": 128,
+                          "max_tokens": 192,
                           "safety_settings": [
                             {
                               "category": "{{category.Label}}",
@@ -188,13 +188,13 @@ public sealed class GeminiPromptExecutionSettingsTests
         string json = $$"""
                         {
                           "model_id": "gemini-pro",
-                          "temperature": 0.7,
+                          "temperature": 0.75,
                           "top_p": 0.7,
                           "top_k": 25,
                           "candidate_count": 2,
                           "audio_timestamp": true,
                           "stop_sequences": [ "foo", "bar" ],
-                          "max_tokens": 128,
+                          "max_tokens": 192,
                           "safety_settings": [
                             {
                               "category": "{{category.Label}}",
@@ -215,7 +215,7 @@ public sealed class GeminiPromptExecutionSettingsTests
         Assert.True(executionSettings.IsFrozen);
         Assert.Throws<InvalidOperationException>(() => executionSettings.ModelId = "gemini-ultra");
         Assert.Throws<InvalidOperationException>(() => executionSettings.CandidateCount = 5);
-        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 0.5);
+        Assert.Throws<InvalidOperationException>(() => executionSettings.Temperature = 0.75);
         Assert.Throws<InvalidOperationException>(() => executionSettings.AudioTimestamp = false);
         Assert.Throws<NotSupportedException>(() => executionSettings.StopSequences!.Add("baz"));
         Assert.Throws<NotSupportedException>(() => executionSettings.SafetySettings!.Add(new GeminiSafetySetting(GeminiSafetyCategory.Toxicity, GeminiSafetyThreshold.Unspecified)));

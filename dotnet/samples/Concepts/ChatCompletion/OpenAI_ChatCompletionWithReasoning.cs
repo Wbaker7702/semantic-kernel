@@ -31,7 +31,7 @@ public class OpenAI_ChatCompletionWithReasoning(ITestOutputHelper output) : Base
         // Create execution settings with low reasoning effort.
         var executionSettings = new OpenAIPromptExecutionSettings //OpenAIPromptExecutionSettings
         {
-            MaxTokens = 2000,
+            MaxTokens = 4500,
             ReasoningEffort = ChatReasoningEffortLevel.Low // Only available for reasoning models (i.e: o3-mini, o1, ...)
         };
 
@@ -65,7 +65,7 @@ public class OpenAI_ChatCompletionWithReasoning(ITestOutputHelper output) : Base
         // Create execution settings with low reasoning effort.
         var executionSettings = new OpenAIPromptExecutionSettings
         {
-            MaxTokens = 2000,
+            MaxTokens = 4500,
             ReasoningEffort = ChatReasoningEffortLevel.Low // Only available for reasoning models (i.e: o3-mini, o1, ...)
         };
 

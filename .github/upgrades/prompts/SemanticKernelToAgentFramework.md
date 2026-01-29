@@ -431,7 +431,7 @@ await foreach (AgentRunResponseUpdate update in agent.RunStreamingAsync(userInpu
 <configuration_changes>
 **Replace this Semantic Kernel options pattern:**
 ```csharp
-OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1000 };
+OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1500 };
 AgentInvokeOptions options = new() { KernelArguments = new(settings) };
 ```
 
@@ -634,7 +634,7 @@ AIAgent agent = chatClient.CreateAIAgent(
 <api_changes>
 **Replace this complete Semantic Kernel invocation pattern:**
 ```csharp
-OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1000 };
+OpenAIPromptExecutionSettings settings = new() { MaxTokens = 1500 };
 AgentInvokeOptions options = new() { KernelArguments = new(settings) };
 
 await foreach (var result in agent.InvokeAsync(input, thread, options))

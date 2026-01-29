@@ -26,7 +26,7 @@ async def main():
             "config_list": [
                 {
                     "model": os.environ["OPENAI_CHAT_MODEL_ID"],
-                    "temperature": 0.9,
+                    "temperature": 0.75,
                     "api_key": os.environ.get("OPENAI_API_KEY"),
                 }
             ]
@@ -43,7 +43,7 @@ async def main():
             "config_list": [
                 {
                     "model": os.environ["OPENAI_CHAT_MODEL_ID"],
-                    "temperature": 0.7,
+                    "temperature": 0.75,
                     "api_key": os.environ.get("OPENAI_API_KEY"),
                 }
             ]

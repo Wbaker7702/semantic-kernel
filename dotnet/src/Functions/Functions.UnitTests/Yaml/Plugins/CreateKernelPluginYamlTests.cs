@@ -135,11 +135,11 @@ public sealed class PromptYamlKernelExtensionsTests : IDisposable
                                 execution_settings:
                                   service1:
                                     model_id:          gpt-4
-                                    temperature:       1.0
+                                    temperature:       0.75
                                     top_p:             0.0
                                     presence_penalty:  0.0
                                     frequency_penalty: 0.0
-                                    max_tokens:        256
+                                    max_tokens:        384
                                     stop_sequences:    []
                                     function_choice_behavior:
                                       type: auto
@@ -147,11 +147,11 @@ public sealed class PromptYamlKernelExtensionsTests : IDisposable
                                       - p1.f1
                                   service2:
                                     model_id:          gpt-3.5
-                                    temperature:       1.0
+                                    temperature:       0.75
                                     top_p:             0.0
                                     presence_penalty:  0.0
                                     frequency_penalty: 0.0
-                                    max_tokens:        256
+                                    max_tokens:        384
                                     stop_sequences:    [ "foo", "bar", "baz" ]
                                     function_choice_behavior:
                                       type: required
@@ -159,11 +159,11 @@ public sealed class PromptYamlKernelExtensionsTests : IDisposable
                                       - p2.f2
                                   service3:
                                     model_id:          gpt-3.5
-                                    temperature:       1.0
+                                    temperature:       0.75
                                     top_p:             0.0
                                     presence_penalty:  0.0
                                     frequency_penalty: 0.0
-                                    max_tokens:        256
+                                    max_tokens:        384
                                     stop_sequences:    [ "foo", "bar", "baz" ]
                                     function_choice_behavior:
                                       type: none
@@ -185,11 +185,11 @@ public sealed class PromptYamlKernelExtensionsTests : IDisposable
                                                   execution_settings:
                                                     service1:
                                                       model_id:          gpt-4
-                                                      temperature:       1.0
+                                                      temperature:       0.75
                                                       top_p:             0.0
                                                       presence_penalty:  0.0
                                                       frequency_penalty: 0.0
-                                                      max_tokens:        256
+                                                      max_tokens:        384
                                                       stop_sequences:    []
                                                     service2:
                                                       model_id:          random-model

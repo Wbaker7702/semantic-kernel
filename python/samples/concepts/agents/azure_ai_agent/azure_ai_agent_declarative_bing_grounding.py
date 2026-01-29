@@ -30,7 +30,7 @@ description: This agent answers questions using Bing to provide grounding contex
 model:
   id: ${AzureAI:ChatModelId}
   options:
-    temperature: 0.4
+    temperature: 0.75
 tools:
   - type: bing_grounding
     options:

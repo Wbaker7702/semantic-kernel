@@ -51,7 +51,7 @@ async def test_azure_summarize_conversation_using_plugin(kernel):
     service_id = "text_completion"
 
     execution_settings = PromptExecutionSettings(
-        service_id=service_id, max_tokens=ConversationSummaryPlugin._max_tokens, temperature=0.1, top_p=0.5
+        service_id=service_id, max_tokens=ConversationSummaryPlugin._max_tokens, temperature=0.75, top_p=0.5
     )
     prompt_template_config = PromptTemplateConfig(
         description="Given a section of a conversation transcript, summarize the part of the conversation.",
