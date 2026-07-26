@@ -68,7 +68,7 @@ autogen = [
     "autogen-agentchat >= 0.2, < 0.8"
 ]
 aws = [
-    "boto3>=1.36.4,<1.41.0",
+    "boto3>=1.36.4,<1.43.0",
 ]
 azure = [
     "azure-ai-inference >= 1.0.0b6",
@@ -77,7 +77,7 @@ azure = [
     "azure-cosmos ~= 4.7"
 ]
 chroma = [
-    "chromadb >= 0.5,< 1.4"
+    "chromadb >= 0.5,< 1.5"
 ]
 copilotstudio = [
     "microsoft-agents-copilotstudio-client >= 0.3.1",
@@ -92,7 +92,7 @@ faiss = [
     "faiss-cpu>=1.10.0"
 ]
 google = [
-    "google-cloud-aiplatform >= 1.114,< 1.127",
+    "google-cloud-aiplatform >= 1.114,< 1.136",
     "google-generativeai ~= 0.8"
 ]
 hugging_face = [
@@ -111,7 +111,7 @@ mistralai = [
     "mistralai >= 1.2,< 2.0"
 ]
 mongo = [
-    "pymongo >= 4.8.0, < 4.16",
+    "pymongo >= 4.8.0, < 4.17",
     "motor >= 3.3.2,< 3.8.0"
 ]
 notebooks = [
@@ -151,7 +151,7 @@ sql = [
 ]
 usearch = [
     "usearch ~= 2.16",
-    "pyarrow >= 12.0,< 23.0"
+    "pyarrow >= 12.0,< 24.0"
 ]
 weaviate = [
     "weaviate-client>=4.17.0,<5.0",
