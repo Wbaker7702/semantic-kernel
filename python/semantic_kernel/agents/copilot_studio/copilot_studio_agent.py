@@ -181,7 +181,7 @@ class _CopilotStudioAgentTokenFactory:
 
         pem_bytes = Path(cert_path).read_bytes()
         der_bytes = ssl.PEM_cert_to_DER_cert(pem_bytes.decode())
-        return hashlib.sha1(der_bytes, usedforsecurity=False).hexdigest().upper()
+        return hashlib.sha256(der_bytes).hexdigest().upper()
 
 
 # endregion
