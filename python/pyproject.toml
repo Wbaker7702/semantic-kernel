@@ -108,7 +108,7 @@ milvus = [
     "milvus >= 2.3,< 2.3.10; platform_system != 'Windows'"
 ]
 mistralai = [
-    "mistralai >= 1.2,< 2.0"
+    "mistralai >= 1.2,< 3.0"
 ]
 mongo = [
     "pymongo >= 4.8.0, < 4.17",
