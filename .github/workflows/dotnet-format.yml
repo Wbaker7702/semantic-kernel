@@ -53,11 +53,14 @@ jobs:
       - name: Find csproj files
         id: find-csproj
         if: github.event_name != 'pull_request' || steps.changed-files.outputs.added_modified != '' || steps.changed-files.outcome == 'failure'
+        env:
+          ADDED_MODIFIED: ${{ steps.changed-files.outputs.added_modified }}
         run: |
           csproj_files=()
           exclude_files=("Experimental.Orchestration.Flow.csproj" "Experimental.Orchestration.Flow.UnitTests.csproj" "Experimental.Orchestration.Flow.IntegrationTests.csproj")
           if [[ ${{ steps.changed-files.outcome }} == 'success' ]]; then
-            for file in ${{ steps.changed-files.outputs.added_modified }}; do
+            while IFS= read -r file; do
+              [[ -z "$file" ]] && continue
               echo "$file was changed"
               dir="./$file"
               while [[ $dir != "." && $dir != "/" && $dir != $GITHUB_WORKSPACE ]]; do
@@ -71,7 +74,7 @@ jobs:
 
                 dir=$(echo ${dir%/*})
               done
-            done
+            done <<< "$ADDED_MODIFIED"
           else
             # if the changed-files step failed, run dotnet on the whole slnx instead of specific projects
             csproj_files=$(find ./ -type f -name "*.slnx" | tr '\n' ' ');
